@@ -6,14 +6,14 @@
 
 <!-- Hero Section -->
 <section class="hero-box text-center mb-5">
-    <h1>Welcome to Planteer 🌱</h1>
+    <h1>Welcome to Planteer </h1>
     <p class="mb-4">Discover, explore, and manage your botanical collection with elegance</p>
     <div class="d-flex gap-3 justify-content-center flex-wrap">
         <a href="{% url 'plants:all_plants' %}" class="btn btn-main btn-lg">
-            🌿 Explore Plants
+            Explore Plants
         </a>
         <a href="{% url 'plants:add_plant' %}" class="btn btn-outline-main btn-lg">
-            ➕ Add New Plant
+            Add New Plant
         </a>
     </div>
 </section>
@@ -31,7 +31,7 @@
                 >
                 <div class="position-absolute top-0 start-0 m-4">
                     <div class="badge text-bg-success" style="font-size: 1rem; padding: 0.75rem 1.25rem;">
-                        🌺 Premium Collection
+                        Premium Collection
                     </div>
                 </div>
             </div>
@@ -53,7 +53,7 @@
             <div class="row g-3">
                 <div class="col-md-6">
                     <div class="d-flex gap-3 p-3 rounded-3" style="background: rgba(16, 185, 129, 0.05); border-left: 4px solid var(--primary);">
-                        <div style="font-size: 2rem;">🌸</div>
+                        <div style="font-size: 2rem;"></div>
                         <div>
                             <h6 class="fw-bold mb-1">Authentic Plants</h6>
                             <p class="small text-muted mb-0">Browse real plants with stunning high-quality images</p>
@@ -63,7 +63,7 @@
                 
                 <div class="col-md-6">
                     <div class="d-flex gap-3 p-3 rounded-3" style="background: rgba(16, 185, 129, 0.05); border-left: 4px solid var(--primary);">
-                        <div style="font-size: 2rem;">🔍</div>
+                        <div style="font-size: 2rem;"></div>
                         <div>
                             <h6 class="fw-bold mb-1">Smart Search</h6>
                             <p class="small text-muted mb-0">Find plants instantly with advanced filtering</p>
@@ -73,7 +73,7 @@
                 
                 <div class="col-md-6">
                     <div class="d-flex gap-3 p-3 rounded-3" style="background: rgba(16, 185, 129, 0.05); border-left: 4px solid var(--primary);">
-                        <div style="font-size: 2rem;">⚡</div>
+                        <div style="font-size: 2rem;"></div>
                         <div>
                             <h6 class="fw-bold mb-1">Easy Management</h6>
                             <p class="small text-muted mb-0">Add, edit, and organize plants effortlessly</p>
@@ -83,7 +83,7 @@
                 
                 <div class="col-md-6">
                     <div class="d-flex gap-3 p-3 rounded-3" style="background: rgba(16, 185, 129, 0.05); border-left: 4px solid var(--primary);">
-                        <div style="font-size: 2rem;">📱</div>
+                        <div style="font-size: 2rem;"></div>
                         <div>
                             <h6 class="fw-bold mb-1">Responsive Design</h6>
                             <p class="small text-muted mb-0">Perfect experience on all devices</p>
@@ -99,7 +99,7 @@
 <section class="mt-5 pt-5">
     <div class="d-flex justify-content-between align-items-center mb-4">
         <div>
-            <h2 class="fw-bold mb-1" style="font-size: 2.5rem; color: var(--gray-900);">🌺 Latest Plants</h2>
+            <h2 class="fw-bold mb-1" style="font-size: 2.5rem; color: var(--gray-900);"> Latest Plants</h2>
             <p class="text-muted mb-0">Discover our newest additions to the collection</p>
         </div>
         <a href="{% url 'plants:all_plants' %}" class="btn btn-outline-main d-none d-md-block">
@@ -115,26 +115,26 @@
                     <img src="{{ plant.image_url }}" class="card-img-top" alt="{{ plant.name }}">
                     <div class="position-absolute top-0 end-0 m-3">
                         <button class="btn btn-sm add-to-favorites" 
-                                data-plant-id="{{ plant.id }}"
-                                onclick="toggleFavorite({{ plant.id }}, {
-                                    id: {{ plant.id }},
-                                    name: '{{ plant.name|escapejs }}',
-                                    scientific_name: '{{ plant.scientific_name|escapejs }}',
-                                    description: '{{ plant.description|escapejs }}',
-                                    image_url: '{{ plant.image_url|escapejs }}',
-                                    category_display: '{{ plant.get_category_display|escapejs }}',
-                                    is_edible: {{ plant.is_edible|yesno:'true,false' }},
-                                    average_rating: {{ plant.average_rating }},
-                                    comments_count: {{ plant.comments.count }}
+                               ` data-plant-id="{{ plant.id }}"
+                                `onclick="toggleFavorite({{ plant.id }}, {
+                                    `id: {{ plant.id }},`
+                                    `name: '{{ plant.name|escapejs }}',
+                                    'scientific_name: '{{ plant.scientific_name|escapejs }}',
+                                    'description: '{{ plant.description|escapejs }}',
+                                    'image_url: '{{ plant.image_url|escapejs }}',
+                                    'category_display: '{{ plant.get_category_display|escapejs }}',
+                                    'is_edible: {{ plant.is_edible|yesno:'true,false' }},
+                                    'average_rating: {{ plant.average_rating }},
+                                    'comments_count: {{ plant.comments.count }}
                                 })"
                                 style="border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;"
                                 title="Add to favorites">
-                            🤍
+                            
                         </button>
                     </div>
                     <div class="position-absolute bottom-0 end-0 m-3">
                         {% if plant.is_edible %}
-                        <span class="badge text-bg-success">🍃 Edible</span>
+                        <span class="badge text-bg-success"> Edible</span>
                         {% endif %}
                     </div>
                 </div>
@@ -159,7 +159,7 @@
                             <span class="rating-number">{{ plant.average_rating }}</span>
                         </div>
                         <small class="text-muted">
-                            <span style="font-size: 1.1rem;">💬</span> {{ plant.comments.count }} comment{{ plant.comments.count|pluralize }}
+                             {{ plant.comments.count }} comment{{ plant.comments.count|pluralize }}
                         </small>
                     </div>
                     
@@ -172,11 +172,11 @@
         {% empty %}
         <div class="col-12">
             <div class="text-center p-5 rounded-4" style="background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(236, 253, 245, 0.9)); border: 2px dashed var(--primary);">
-                <div style="font-size: 4rem; margin-bottom: 1rem;">🌱</div>
+                <div style="font-size: 4rem; margin-bottom: 1rem;"></div>
                 <h3 class="fw-bold mb-3" style="color: var(--gray-800);">No Plants Yet!</h3>
                 <p class="text-muted mb-4">Start building your collection by adding your first plant.</p>
                 <a href="{% url 'plants:add_plant' %}" class="btn btn-main btn-lg">
-                    ➕ Add Your First Plant
+                    Add Your First Plant
                 </a>
             </div>
         </div>
@@ -197,21 +197,21 @@
     <div class="row g-4 text-center">
         <div class="col-md-4">
             <div class="p-4 rounded-4" style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(5, 150, 105, 0.05)); border: 2px solid rgba(16, 185, 129, 0.2);">
-                <div style="font-size: 3rem; margin-bottom: 0.5rem;">🌿</div>
+                <div style="font-size: 3rem; margin-bottom: 0.5rem;"></div>
                 <h3 class="fw-bold mb-2" style="color: var(--primary);">{{ latest_plants|length }}+</h3>
                 <p class="text-muted mb-0">Plants in Collection</p>
             </div>
         </div>
         <div class="col-md-4">
             <div class="p-4 rounded-4" style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(5, 150, 105, 0.05)); border: 2px solid rgba(16, 185, 129, 0.2);">
-                <div style="font-size: 3rem; margin-bottom: 0.5rem;">🌺</div>
+                <div style="font-size: 3rem; margin-bottom: 0.5rem;"></div>
                 <h3 class="fw-bold mb-2" style="color: var(--primary);">7</h3>
                 <p class="text-muted mb-0">Plant Categories</p>
             </div>
         </div>
         <div class="col-md-4">
             <div class="p-4 rounded-4" style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(5, 150, 105, 0.05)); border: 2px solid rgba(16, 185, 129, 0.2);">
-                <div style="font-size: 3rem; margin-bottom: 0.5rem;">⚡</div>
+                <div style="font-size: 3rem; margin-bottom: 0.5rem;"></div>
                 <h3 class="fw-bold mb-2" style="color: var(--primary);">Fast</h3>
                 <p class="text-muted mb-0">Search & Filter</p>
             </div>

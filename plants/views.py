@@ -3,12 +3,12 @@ from django.contrib import messages
 from django.db.models import Q, Prefetch
 from django.core.paginator import Paginator
 from django.http import JsonResponse
-
+from django.http import HttpRequest,HttpResponse
 from .models import Plant, Comment, Rating
 from .forms import PlantForm, CommentForm, RatingForm
 
 
-def all_plants(request):
+def all_plants(request:HttpRequest):
     plants = Plant.objects.select_related().prefetch_related('comments').order_by('-created_at')
 
     query = request.GET.get('q', '').strip()
@@ -44,7 +44,7 @@ def all_plants(request):
     return render(request, 'plants/all_plants.html', context)
 
 
-def plant_detail(request, plant_id):
+def plant_detail(request, plant_id:HttpRequest):
     plant = get_object_or_404(
         Plant.objects.prefetch_related('comments', 'ratings'),
         id=plant_id
@@ -110,7 +110,7 @@ def plant_detail(request, plant_id):
     return render(request, 'plants/plant_detail.html', context)
 
 
-def add_plant(request):
+def add_plant(request:HttpRequest):
     if request.method == 'POST':
         form = PlantForm(request.POST)
         if form.is_valid():
@@ -131,7 +131,7 @@ def add_plant(request):
     return render(request, 'plants/plant_form.html', context)
 
 
-def update_plant(request, plant_id):
+def update_plant(request, plant_id:HttpRequest):
     plant = get_object_or_404(Plant, id=plant_id)
 
     if request.method == 'POST':
@@ -155,7 +155,7 @@ def update_plant(request, plant_id):
     return render(request, 'plants/plant_form.html', context)
 
 
-def delete_plant(request, plant_id):
+def delete_plant(request, plant_id:HttpRequest):
     plant = get_object_or_404(Plant, id=plant_id)
 
     if request.method == 'POST':
@@ -171,7 +171,7 @@ def delete_plant(request, plant_id):
     return render(request, 'plants/plant_delete.html', context)
 
 
-def search_plants(request):
+def search_plants(request:HttpRequest):
     query = request.GET.get('q', '').strip()
     results = []
 
@@ -191,7 +191,7 @@ def search_plants(request):
     return render(request, 'plants/search.html', context)
 
 
-def toggle_favorite(request, plant_id):
+def toggle_favorite(request, plant_id:HttpRequest):
     if request.method == 'POST':
         plant = get_object_or_404(Plant, id=plant_id)
         return JsonResponse({
@@ -202,7 +202,7 @@ def toggle_favorite(request, plant_id):
     return JsonResponse({'success': False})
 
 
-def favorites(request):
+def favorites(request:HttpRequest):
     context = {
         'page_title': 'My Favorites'
     }

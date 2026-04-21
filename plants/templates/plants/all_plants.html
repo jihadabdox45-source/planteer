@@ -1,14 +1,17 @@
 {% extends 'core/base.html' %}
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/stayle.css' %}">
+{% endblock %}
 
 {% block title %}All Plants - Planteer{% endblock %}
 
 {% block content %}
-
 <!-- Page Header -->
 <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-4">
     <div>
         <h1 class="mb-2" style="font-size: 3rem; font-weight: 900; color: var(--gray-900);">
-            🌿 Plant Collection
+            Plant Collection
         </h1>
         <p class="text-muted mb-0" style="font-size: 1.1rem;">
             Explore and manage your botanical garden
@@ -23,12 +26,12 @@
 <form method="GET" class="filter-box mb-5">
     <div class="row g-4">
         <div class="col-12">
-            <h5 class="fw-bold mb-3" style="color: var(--gray-800);">🔍 Search & Filter</h5>
+            <h5 class="fw-bold mb-3" style="color: var(--gray-800);">Search & Filter</h5>
         </div>
         
         <div class="col-md-4">
             <label class="form-label">
-                <span style="font-size: 1.1rem;">🔎</span> Search Plants
+                <span style="font-size: 1.1rem;"></span> Search Plants
             </label>
             <input 
                 type="text" 
@@ -41,7 +44,7 @@
 
         <div class="col-md-3">
             <label class="form-label">
-                <span style="font-size: 1.1rem;">📂</span> Category
+                <span style="font-size: 1.1rem;"></span> Category
             </label>
             <select name="category" class="form-select">
                 <option value="">All Categories</option>
@@ -55,7 +58,7 @@
 
         <div class="col-md-3">
             <label class="form-label">
-                <span style="font-size: 1.1rem;">🍃</span> Edibility
+                 Edibility
             </label>
             <select name="is_edible" class="form-select">
                 <option value="">All Plants</option>
@@ -85,7 +88,6 @@
 <!-- Results Count -->
 <div class="d-flex justify-content-between align-items-center mb-4 p-3 rounded-3" style="background: rgba(16, 185, 129, 0.05);">
     <div class="d-flex align-items-center gap-2">
-        <span style="font-size: 1.5rem;">🌺</span>
         <span class="fw-semibold" style="color: var(--gray-700);">
             Found <span class="fw-bold" style="color: var(--primary); font-size: 1.2rem;">{{ plants_count }}</span> 
             plant{{ plants_count|pluralize }}
@@ -103,25 +105,25 @@
                 <div class="position-absolute top-0 end-0 m-3">
                     <button class="btn btn-sm add-to-favorites" 
                             data-plant-id="{{ plant.id }}"
-                            onclick="toggleFavorite({{ plant.id }}, {
-                                id: {{ plant.id }},
-                                name: '{{ plant.name|escapejs }}',
-                                scientific_name: '{{ plant.scientific_name|escapejs }}',
-                                description: '{{ plant.description|escapejs }}',
-                                image_url: '{{ plant.image_url|escapejs }}',
-                                category_display: '{{ plant.get_category_display|escapejs }}',
-                                is_edible: {{ plant.is_edible|yesno:'true,false' }},
-                                average_rating: {{ plant.average_rating }},
-                                comments_count: {{ plant.comments.count }}
+                            `onclick="toggleFavorite({{ plant.id }}`, {
+                                `id: {{ plant.id }}`,
+                                `name: '{{ plant.name|escapejs }}',
+                                'scientific_name: '{{ plant.scientific_name|escapejs }}',
+                                'description: '{{ plant.description|escapejs }}',
+                                'image_url: '{{ plant.image_url|escapejs }}',
+                                'category_display: '{{ plant.get_category_display|escapejs }}',
+                                'is_edible: {{ plant.is_edible|yesno:'true,false' }},
+                                'average_rating: {{ plant.average_rating }},
+                                'comments_count: {{ plant.comments.count }}'
                             })"
                             style="border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;"
                             title="Add to favorites">
-                        🤍
+                        
                     </button>
                 </div>
                 <div class="position-absolute bottom-0 end-0 m-3">
                     {% if plant.is_edible %}
-                    <span class="badge text-bg-success">🍃 Edible</span>
+                    <span class="badge text-bg-success">Edible</span>
                     {% else %}
                     <span class="badge text-bg-secondary">Not Edible</span>
                     {% endif %}
@@ -155,7 +157,7 @@
                         <span class="rating-number">{{ plant.average_rating }}</span>
                     </div>
                     <small class="text-muted">
-                        <span style="font-size: 1.1rem;">💬</span> {{ plant.comments.count }} comment{{ plant.comments.count|pluralize }}
+                        {{ plant.comments.count }} comment{{ plant.comments.count|pluralize }}
                     </small>
                 </div>
                 
@@ -168,7 +170,7 @@
     {% empty %}
     <div class="col-12">
         <div class="text-center p-5 rounded-4" style="background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(236, 253, 245, 0.9)); border: 2px dashed var(--primary);">
-            <div style="font-size: 5rem; margin-bottom: 1.5rem;">🔍</div>
+            <div style="font-size: 5rem; margin-bottom: 1.5rem;"></div>
             <h3 class="fw-bold mb-3" style="color: var(--gray-800);">No Plants Found</h3>
             <p class="text-muted mb-4" style="font-size: 1.1rem;">
                 We couldn't find any plants matching your criteria. Try adjusting your filters.
@@ -186,4 +188,7 @@
     {% endfor %}
 </div>
 
+{% block extra_js %}
+<script src="{% static 'js/script.js' %}"></script>
+{% endblock %}
 {% endblock %}
