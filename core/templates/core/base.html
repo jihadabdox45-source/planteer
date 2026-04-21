@@ -1,0 +1,177 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Planteer{% endblock %}</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light sticky-top custom-navbar">
+    <div class="container">
+        <a class="navbar-brand" href="{% url 'core:home' %}">🌿 Planteer</a>
+
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navMenu">
+            <ul class="navbar-nav ms-auto align-items-center">
+                <li class="nav-item"><a class="nav-link" href="{% url 'core:home' %}">🏠 Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'plants:all_plants' %}">🌺 All Plants</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'plants:favorites' %}">❤️ Favorites <span id="favorites-count" class="badge bg-danger ms-1" style="display: none;">0</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'plants:search' %}">🔍 Search</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'core:contact' %}">📧 Contact</a></li>
+                <li class="nav-item ms-lg-2">
+                    <a class="btn btn-main btn-sm" href="{% url 'plants:add_plant' %}">+ Add Plant</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main class="container py-4">
+    {% block content %}{% endblock %}
+</main>
+
+<footer class="custom-footer text-center">
+    <div class="container">
+        <p class="mb-2 fw-semibold" style="font-size: 1.1rem;">🌿 Planteer</p>
+        <p class="mb-0">&copy; 2026 Planteer - Where Plant Lovers Grow Together 🌱</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+// Favorites System JavaScript
+document.addEventListener('DOMContentLoaded', function() {
+    updateFavoritesCounter();
+    initializeFavoriteButtons();
+});
+
+function updateFavoritesCounter() {
+    const favorites = JSON.parse(localStorage.getItem('plant_favorites') || '[]');
+    const counter = document.getElementById('favorites-count');
+    
+    if (counter) {
+        if (favorites.length > 0) {
+            counter.textContent = favorites.length;
+            counter.style.display = 'inline';
+        } else {
+            counter.style.display = 'none';
+        }
+    }
+}
+
+function initializeFavoriteButtons() {
+    const favorites = JSON.parse(localStorage.getItem('plant_favorites') || '[]');
+    const favoriteButtons = document.querySelectorAll('.add-to-favorites');
+    
+    favoriteButtons.forEach(button => {
+        const plantId = parseInt(button.dataset.plantId);
+        if (favorites.includes(plantId)) {
+            button.classList.add('active');
+            button.innerHTML = '❤️';
+            button.title = 'Remove from favorites';
+        }
+    });
+}
+
+function toggleFavorite(plantId, plantData = null) {
+    let favorites = JSON.parse(localStorage.getItem('plant_favorites') || '[]');
+    let favoritePlants = JSON.parse(localStorage.getItem('favorite_plants_data') || '{}');
+    
+    const button = document.querySelector(`[data-plant-id="${plantId}"]`);
+    
+    if (favorites.includes(plantId)) {
+        // Remove from favorites
+        favorites = favorites.filter(id => id !== plantId);
+        delete favoritePlants[plantId];
+        
+        if (button) {
+            button.classList.remove('active');
+            button.innerHTML = '🤍';
+            button.title = 'Add to favorites';
+            button.classList.add('animate');
+        }
+        
+        showToast('Plant removed from favorites!', 'info');
+    } else {
+        // Add to favorites
+        favorites.push(plantId);
+        
+        if (plantData) {
+            favoritePlants[plantId] = plantData;
+        }
+        
+        if (button) {
+            button.classList.add('active');
+            button.innerHTML = '❤️';
+            button.title = 'Remove from favorites';
+            button.classList.add('animate');
+        }
+        
+        showToast('Plant added to favorites!', 'success');
+    }
+    
+    localStorage.setItem('plant_favorites', JSON.stringify(favorites));
+    localStorage.setItem('favorite_plants_data', JSON.stringify(favoritePlants));
+    
+    updateFavoritesCounter();
+    
+    // Remove animation class after animation completes
+    if (button) {
+        setTimeout(() => {
+            button.classList.remove('animate');
+        }, 600);
+    }
+}
+
+function showToast(message, type = 'success') {
+    const toastContainer = document.getElementById('toast-container') || createToastContainer();
+    
+    const toast = document.createElement('div');
+    toast.className = `alert alert-${type === 'success' ? 'success' : type === 'info' ? 'info' : 'danger'} toast-notification`;
+    toast.innerHTML = `
+        <div class="d-flex align-items-center">
+            <span style="font-size: 1.2rem; margin-right: 0.5rem;">
+                ${type === 'success' ? '✅' : type === 'info' ? 'ℹ️' : '❌'}
+            </span>
+            ${message}
+            <button type="button" class="btn-close ms-auto" onclick="this.parentElement.parentElement.remove()"></button>
+        </div>
+    `;
+    
+    toastContainer.appendChild(toast);
+    
+    setTimeout(() => {
+        if (toast.parentNode) {
+            toast.remove();
+        }
+    }, 4000);
+}
+
+function createToastContainer() {
+    const container = document.createElement('div');
+    container.id = 'toast-container';
+    container.style.cssText = 'position: fixed; top: 20px; right: 20px; z-index: 9999;';
+    document.body.appendChild(container);
+    return container;
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,115 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Search Plants - Planteer{% endblock %}
+
+{% block content %}
+
+<!-- Page Header -->
+<div class="text-center mb-5">
+    <div style="font-size: 4rem; margin-bottom: 1rem;">🔍</div>
+    <h1 class="fw-bold mb-3" style="font-size: 3rem; color: var(--gray-900);">
+        Search Plants
+    </h1>
+    <p class="text-muted" style="font-size: 1.15rem;">
+        Find your perfect plant by name, scientific name, or category
+    </p>
+</div>
+
+<!-- Search Form -->
+<form method="GET" class="mb-5">
+    <div class="card border-0 shadow-lg rounded-4 p-4" style="background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(236, 253, 245, 0.98));">
+        <div class="row g-3 align-items-end">
+            <div class="col-md-10">
+                <label class="form-label fw-semibold" style="color: var(--gray-700);">
+                    <span style="font-size: 1.2rem;">🔎</span> Search Query
+                </label>
+                <input 
+                    type="text" 
+                    name="q" 
+                    class="form-control form-control-lg" 
+                    placeholder="Enter plant name, scientific name, or category..." 
+                    value="{{ query }}"
+                    style="padding: 1rem 1.25rem; font-size: 1.1rem;"
+                >
+            </div>
+            <div class="col-md-2">
+                <button class="btn btn-main btn-lg w-100" style="padding: 1rem;">
+                    Search
+                </button>
+            </div>
+        </div>
+    </div>
+</form>
+
+<!-- Results Section -->
+{% if query %}
+<div class="mb-4">
+    <div class="d-flex align-items-center gap-2 p-3 rounded-3" style="background: rgba(16, 185, 129, 0.05);">
+        <span style="font-size: 1.5rem;">🌺</span>
+        <span class="fw-semibold" style="color: var(--gray-700);">
+            Found <span class="fw-bold" style="color: var(--primary); font-size: 1.2rem;">{{ results|length }}</span> 
+            result{{ results|length|pluralize }} for "<strong>{{ query }}</strong>"
+        </span>
+    </div>
+</div>
+{% endif %}
+
+<!-- Results Grid -->
+<div class="row g-4">
+    {% for plant in results %}
+    <div class="col-sm-6 col-lg-4 col-xl-3">
+        <div class="plant-card">
+            <div style="overflow: hidden; position: relative;">
+                <img src="{{ plant.image_url }}" class="card-img-top" alt="{{ plant.name }}">
+                <div class="position-absolute top-0 end-0 m-3">
+                    {% if plant.is_edible %}
+                    <span class="badge text-bg-success">🍃 Edible</span>
+                    {% endif %}
+                </div>
+            </div>
+            
+            <div class="card-body">
+                <div class="mb-3">
+                    <span class="category-badge">{{ plant.get_category_display }}</span>
+                </div>
+                
+                <h5 class="card-title">{{ plant.name }}</h5>
+                <p class="text-muted small mb-3" style="font-style: italic;">
+                    {{ plant.scientific_name }}
+                </p>
+                
+                <a href="{% url 'plants:detail' plant.id %}" class="btn btn-outline-main w-100">
+                    View Details →
+                </a>
+            </div>
+        </div>
+    </div>
+    {% empty %}
+        {% if query %}
+        <div class="col-12">
+            <div class="text-center p-5 rounded-4" style="background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(236, 253, 245, 0.9)); border: 2px dashed var(--primary);">
+                <div style="font-size: 5rem; margin-bottom: 1.5rem;">🔍</div>
+                <h3 class="fw-bold mb-3" style="color: var(--gray-800);">No Results Found</h3>
+                <p class="text-muted mb-4" style="font-size: 1.1rem;">
+                    We couldn't find any plants matching "<strong>{{ query }}</strong>". Try a different search term.
+                </p>
+                <a href="{% url 'plants:search' %}" class="btn btn-main">
+                    Try New Search
+                </a>
+            </div>
+        </div>
+        {% else %}
+        <div class="col-12">
+            <div class="text-center p-5 rounded-4" style="background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(236, 253, 245, 0.9)); border: 2px dashed var(--primary);">
+                <div style="font-size: 5rem; margin-bottom: 1.5rem;">🌿</div>
+                <h3 class="fw-bold mb-3" style="color: var(--gray-800);">Start Your Search</h3>
+                <p class="text-muted mb-0" style="font-size: 1.1rem;">
+                    Enter a search term above to find plants in our collection
+                </p>
+            </div>
+        </div>
+        {% endif %}
+    {% endfor %}
+</div>
+
+{% endblock %}

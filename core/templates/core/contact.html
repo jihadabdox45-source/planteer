@@ -1,0 +1,94 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Contact Us - Planteer{% endblock %}
+
+{% block content %}
+
+<div class="row justify-content-center">
+    <div class="col-lg-8 col-xl-7">
+        
+        <!-- Contact Form Card -->
+        <div class="card border-0 shadow-lg rounded-4 p-4 p-md-5" style="background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(236, 253, 245, 0.98));">
+            
+            <!-- Header -->
+            <div class="text-center mb-5">
+                <div class="mb-3">
+                    <span style="font-size: 4rem;">📧</span>
+                </div>
+                <h1 class="fw-bold mb-2" style="font-size: 2.5rem; color: var(--gray-900);">
+                    Get In Touch
+                </h1>
+                <p class="text-muted" style="font-size: 1.1rem;">
+                    Have questions? We'd love to hear from you. Send us a message!
+                </p>
+            </div>
+
+            <!-- Form -->
+            <form method="POST" novalidate>
+                {% csrf_token %}
+                
+                <div class="row g-4">
+                    {% for field in form %}
+                    <div class="col-md-{% if field.name == 'message' %}12{% else %}6{% endif %}">
+                        <div class="form-group">
+                            <label class="form-label">
+                                {% if field.name == 'full_name' %}👤{% endif %}
+                                {% if field.name == 'email' %}📧{% endif %}
+                                {% if field.name == 'subject' %}📝{% endif %}
+                                {% if field.name == 'message' %}💬{% endif %}
+                                {{ field.label }}
+                            </label>
+                            {{ field }}
+                            
+                            {% if field.errors %}
+                            <div class="text-danger small mt-2 fw-semibold">
+                                {% for error in field.errors %}
+                                    <div>⚠️ {{ error }}</div>
+                                {% endfor %}
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+
+                <!-- Submit Button -->
+                <div class="mt-5 d-grid gap-3">
+                    <button type="submit" class="btn btn-main btn-lg" style="padding: 1.125rem; font-size: 1.15rem;">
+                        <span style="font-size: 1.3rem;">📤</span> Send Message
+                    </button>
+                    <a href="{% url 'core:home' %}" class="btn btn-outline-secondary btn-lg">
+                        ← Back to Home
+                    </a>
+                </div>
+
+            </form>
+
+        </div>
+
+        <!-- Contact Info -->
+        <div class="row g-3 mt-4">
+            <div class="col-md-4">
+                <div class="text-center p-3 rounded-3" style="background: rgba(16, 185, 129, 0.05);">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">🌿</div>
+                    <p class="small fw-semibold mb-0" style="color: var(--gray-700);">Plant Experts</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="text-center p-3 rounded-3" style="background: rgba(16, 185, 129, 0.05);">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">⚡</div>
+                    <p class="small fw-semibold mb-0" style="color: var(--gray-700);">Quick Response</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="text-center p-3 rounded-3" style="background: rgba(16, 185, 129, 0.05);">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">💚</div>
+                    <p class="small fw-semibold mb-0" style="color: var(--gray-700);">Always Here</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}
