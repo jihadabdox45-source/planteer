@@ -1,2044 +1,2044 @@
 [
-{
-  "model": "auth.user",
-  "fields": {
-    "password": "pbkdf2_sha256$720000$KrygbsvWNrp8iAuhk5J0g0$gxGpIUNj4k5/dQIkxG/6NymaxftkCkmEDp4uSgHgyyI=",
-    "last_login": null,
-    "is_superuser": true,
-    "username": "admin",
-    "first_name": "",
-    "last_name": "",
-    "email": "admin@planteer.com",
-    "is_staff": true,
-    "is_active": true,
-    "date_joined": "2026-04-22T20:42:40.827Z",
-    "groups": [],
-    "user_permissions": []
+  {
+    "model": "auth.user",
+    "fields": {
+      "password": "pbkdf2_sha256$720000$KrygbsvWNrp8iAuhk5J0g0$gxGpIUNj4k5/dQIkxG/6NymaxftkCkmEDp4uSgHgyyI=",
+      "last_login": null,
+      "is_superuser": true,
+      "username": "admin",
+      "first_name": "",
+      "last_name": "",
+      "email": "admin@planteer.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2026-04-22T20:42:40.827Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "fields": {
+      "password": "pbkdf2_sha256$720000$6a6NUdWjwrgM4Gf2catFOF$AE2CJy0BvlzyFgpqxDmprqmqGxndRqIN/Nn2M0YCNjI=",
+      "last_login": "2026-04-22T21:44:04.506Z",
+      "is_superuser": false,
+      "username": "jihad7x",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2026-04-22T21:02:38.042Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "af1ewkgraaka61oylwpdh93lhog7umuv",
+    "fields": {
+      "session_data": ".eJxVjEEOwiAQRe_C2hBgQMGl-56BzMAgVUOT0q6Md7dNutDtf-_9t4i4LjWunec4ZnEVRpx-N8L05LaD_MB2n2Sa2jKPJHdFHrTLYcr8uh3u30HFXrc6AAeLyRpi0mBZF6OU8zqgzil4B5cALhFAUkqV4DdyJmTMrgCT8-LzBdLVN6I:1wFfMa:qfDl2tdGo47h8B--WsrdDY64GAEaCgw75Mmj3eRe8lQ",
+      "expire_date": "2026-05-06T21:44:04.514Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 1,
+    "fields": {
+      "name": "Saudi Arabia",
+      "flag": "https://flagcdn.com/w320/sa.png",
+      "created_at": "2026-04-23T17:38:25.578Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 2,
+    "fields": {
+      "name": "United Arab Emirates",
+      "flag": "https://flagcdn.com/w320/ae.png",
+      "created_at": "2026-04-23T17:38:25.587Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 3,
+    "fields": {
+      "name": "Egypt",
+      "flag": "https://flagcdn.com/w320/eg.png",
+      "created_at": "2026-04-23T17:38:25.595Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 4,
+    "fields": {
+      "name": "Jordan",
+      "flag": "https://flagcdn.com/w320/jo.png",
+      "created_at": "2026-04-23T17:38:25.602Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 5,
+    "fields": {
+      "name": "Lebanon",
+      "flag": "https://flagcdn.com/w320/lb.png",
+      "created_at": "2026-04-23T17:38:25.611Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 6,
+    "fields": {
+      "name": "Syria",
+      "flag": "https://flagcdn.com/w320/sy.png",
+      "created_at": "2026-04-23T17:38:25.618Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 7,
+    "fields": {
+      "name": "Iraq",
+      "flag": "https://flagcdn.com/w320/iq.png",
+      "created_at": "2026-04-23T17:38:25.626Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 8,
+    "fields": {
+      "name": "Kuwait",
+      "flag": "https://flagcdn.com/w320/kw.png",
+      "created_at": "2026-04-23T17:38:25.634Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 9,
+    "fields": {
+      "name": "Qatar",
+      "flag": "https://flagcdn.com/w320/qa.png",
+      "created_at": "2026-04-23T17:38:25.641Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 10,
+    "fields": {
+      "name": "Bahrain",
+      "flag": "https://flagcdn.com/w320/bh.png",
+      "created_at": "2026-04-23T17:38:25.649Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 11,
+    "fields": {
+      "name": "Oman",
+      "flag": "https://flagcdn.com/w320/om.png",
+      "created_at": "2026-04-23T17:38:25.657Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 12,
+    "fields": {
+      "name": "Yemen",
+      "flag": "https://flagcdn.com/w320/ye.png",
+      "created_at": "2026-04-23T17:38:25.665Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 13,
+    "fields": {
+      "name": "Morocco",
+      "flag": "https://flagcdn.com/w320/ma.png",
+      "created_at": "2026-04-23T17:38:25.678Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 14,
+    "fields": {
+      "name": "Algeria",
+      "flag": "https://flagcdn.com/w320/dz.png",
+      "created_at": "2026-04-23T17:38:25.691Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 15,
+    "fields": {
+      "name": "Tunisia",
+      "flag": "https://flagcdn.com/w320/tn.png",
+      "created_at": "2026-04-23T17:38:25.698Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 16,
+    "fields": {
+      "name": "Libya",
+      "flag": "https://flagcdn.com/w320/ly.png",
+      "created_at": "2026-04-23T17:38:25.716Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 17,
+    "fields": {
+      "name": "Sudan",
+      "flag": "https://flagcdn.com/w320/sd.png",
+      "created_at": "2026-04-23T17:38:25.723Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 18,
+    "fields": {
+      "name": "Palestine",
+      "flag": "https://flagcdn.com/w320/ps.png",
+      "created_at": "2026-04-23T17:38:25.730Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 19,
+    "fields": {
+      "name": "Somalia",
+      "flag": "https://flagcdn.com/w320/so.png",
+      "created_at": "2026-04-23T17:38:25.738Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 20,
+    "fields": {
+      "name": "Djibouti",
+      "flag": "https://flagcdn.com/w320/dj.png",
+      "created_at": "2026-04-23T17:38:25.747Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 21,
+    "fields": {
+      "name": "Comoros",
+      "flag": "https://flagcdn.com/w320/km.png",
+      "created_at": "2026-04-23T17:38:25.789Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 22,
+    "fields": {
+      "name": "Mauritania",
+      "flag": "https://flagcdn.com/w320/mr.png",
+      "created_at": "2026-04-23T17:38:25.797Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 23,
+    "fields": {
+      "name": "South Africa",
+      "flag": "https://flagcdn.com/w320/za.png",
+      "created_at": "2026-04-23T17:38:25.809Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 24,
+    "fields": {
+      "name": "Nigeria",
+      "flag": "https://flagcdn.com/w320/ng.png",
+      "created_at": "2026-04-23T17:38:25.818Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 25,
+    "fields": {
+      "name": "Kenya",
+      "flag": "https://flagcdn.com/w320/ke.png",
+      "created_at": "2026-04-23T17:38:25.826Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 26,
+    "fields": {
+      "name": "Ethiopia",
+      "flag": "https://flagcdn.com/w320/et.png",
+      "created_at": "2026-04-23T17:38:25.833Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 27,
+    "fields": {
+      "name": "Ghana",
+      "flag": "https://flagcdn.com/w320/gh.png",
+      "created_at": "2026-04-23T17:38:25.839Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 28,
+    "fields": {
+      "name": "Tanzania",
+      "flag": "https://flagcdn.com/w320/tz.png",
+      "created_at": "2026-04-23T17:38:25.846Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 29,
+    "fields": {
+      "name": "Uganda",
+      "flag": "https://flagcdn.com/w320/ug.png",
+      "created_at": "2026-04-23T17:38:25.853Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 30,
+    "fields": {
+      "name": "Madagascar",
+      "flag": "https://flagcdn.com/w320/mg.png",
+      "created_at": "2026-04-23T17:38:25.860Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 31,
+    "fields": {
+      "name": "Cameroon",
+      "flag": "https://flagcdn.com/w320/cm.png",
+      "created_at": "2026-04-23T17:38:25.867Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 32,
+    "fields": {
+      "name": "Ivory Coast",
+      "flag": "https://flagcdn.com/w320/ci.png",
+      "created_at": "2026-04-23T17:38:25.874Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 33,
+    "fields": {
+      "name": "Angola",
+      "flag": "https://flagcdn.com/w320/ao.png",
+      "created_at": "2026-04-23T17:38:25.880Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 34,
+    "fields": {
+      "name": "Mozambique",
+      "flag": "https://flagcdn.com/w320/mz.png",
+      "created_at": "2026-04-23T17:38:25.886Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 35,
+    "fields": {
+      "name": "Zambia",
+      "flag": "https://flagcdn.com/w320/zm.png",
+      "created_at": "2026-04-23T17:38:25.892Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 36,
+    "fields": {
+      "name": "Zimbabwe",
+      "flag": "https://flagcdn.com/w320/zw.png",
+      "created_at": "2026-04-23T17:38:25.899Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 37,
+    "fields": {
+      "name": "Botswana",
+      "flag": "https://flagcdn.com/w320/bw.png",
+      "created_at": "2026-04-23T17:38:25.906Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 38,
+    "fields": {
+      "name": "Namibia",
+      "flag": "https://flagcdn.com/w320/na.png",
+      "created_at": "2026-04-23T17:38:25.912Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 39,
+    "fields": {
+      "name": "Mali",
+      "flag": "https://flagcdn.com/w320/ml.png",
+      "created_at": "2026-04-23T17:38:25.919Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 40,
+    "fields": {
+      "name": "Burkina Faso",
+      "flag": "https://flagcdn.com/w320/bf.png",
+      "created_at": "2026-04-23T17:38:25.925Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 41,
+    "fields": {
+      "name": "Niger",
+      "flag": "https://flagcdn.com/w320/ne.png",
+      "created_at": "2026-04-23T17:38:25.932Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 42,
+    "fields": {
+      "name": "Chad",
+      "flag": "https://flagcdn.com/w320/td.png",
+      "created_at": "2026-04-23T17:38:25.938Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 43,
+    "fields": {
+      "name": "Central African Republic",
+      "flag": "https://flagcdn.com/w320/cf.png",
+      "created_at": "2026-04-23T17:38:25.946Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 44,
+    "fields": {
+      "name": "Democratic Republic of the Congo",
+      "flag": "https://flagcdn.com/w320/cd.png",
+      "created_at": "2026-04-23T17:38:25.953Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 45,
+    "fields": {
+      "name": "Republic of the Congo",
+      "flag": "https://flagcdn.com/w320/cg.png",
+      "created_at": "2026-04-23T17:38:25.959Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 46,
+    "fields": {
+      "name": "Gabon",
+      "flag": "https://flagcdn.com/w320/ga.png",
+      "created_at": "2026-04-23T17:38:25.966Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 47,
+    "fields": {
+      "name": "Equatorial Guinea",
+      "flag": "https://flagcdn.com/w320/gq.png",
+      "created_at": "2026-04-23T17:38:25.973Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 48,
+    "fields": {
+      "name": "Rwanda",
+      "flag": "https://flagcdn.com/w320/rw.png",
+      "created_at": "2026-04-23T17:38:25.981Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 49,
+    "fields": {
+      "name": "Burundi",
+      "flag": "https://flagcdn.com/w320/bi.png",
+      "created_at": "2026-04-23T17:38:25.988Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 50,
+    "fields": {
+      "name": "Malawi",
+      "flag": "https://flagcdn.com/w320/mw.png",
+      "created_at": "2026-04-23T17:38:25.994Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 51,
+    "fields": {
+      "name": "Lesotho",
+      "flag": "https://flagcdn.com/w320/ls.png",
+      "created_at": "2026-04-23T17:38:26.001Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 52,
+    "fields": {
+      "name": "Eswatini",
+      "flag": "https://flagcdn.com/w320/sz.png",
+      "created_at": "2026-04-23T17:38:26.007Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 53,
+    "fields": {
+      "name": "Senegal",
+      "flag": "https://flagcdn.com/w320/sn.png",
+      "created_at": "2026-04-23T17:38:26.013Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 54,
+    "fields": {
+      "name": "Gambia",
+      "flag": "https://flagcdn.com/w320/gm.png",
+      "created_at": "2026-04-23T17:38:26.019Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 55,
+    "fields": {
+      "name": "Guinea",
+      "flag": "https://flagcdn.com/w320/gn.png",
+      "created_at": "2026-04-23T17:38:26.026Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 56,
+    "fields": {
+      "name": "Guinea-Bissau",
+      "flag": "https://flagcdn.com/w320/gw.png",
+      "created_at": "2026-04-23T17:38:26.033Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 57,
+    "fields": {
+      "name": "Sierra Leone",
+      "flag": "https://flagcdn.com/w320/sl.png",
+      "created_at": "2026-04-23T17:38:26.043Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 58,
+    "fields": {
+      "name": "Liberia",
+      "flag": "https://flagcdn.com/w320/lr.png",
+      "created_at": "2026-04-23T17:38:26.049Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 59,
+    "fields": {
+      "name": "Togo",
+      "flag": "https://flagcdn.com/w320/tg.png",
+      "created_at": "2026-04-23T17:38:26.055Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 60,
+    "fields": {
+      "name": "Benin",
+      "flag": "https://flagcdn.com/w320/bj.png",
+      "created_at": "2026-04-23T17:38:26.062Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 61,
+    "fields": {
+      "name": "Cape Verde",
+      "flag": "https://flagcdn.com/w320/cv.png",
+      "created_at": "2026-04-23T17:38:26.068Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 62,
+    "fields": {
+      "name": "SÙ…o TomÃ© and PrÙŠncipe",
+      "flag": "https://flagcdn.com/w320/st.png",
+      "created_at": "2026-04-23T17:38:26.075Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 63,
+    "fields": {
+      "name": "Seychelles",
+      "flag": "https://flagcdn.com/w320/sc.png",
+      "created_at": "2026-04-23T17:38:26.081Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 64,
+    "fields": {
+      "name": "Mauritius",
+      "flag": "https://flagcdn.com/w320/mu.png",
+      "created_at": "2026-04-23T17:38:26.087Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 65,
+    "fields": {
+      "name": "Eritrea",
+      "flag": "https://flagcdn.com/w320/er.png",
+      "created_at": "2026-04-23T17:38:26.093Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 66,
+    "fields": {
+      "name": "South Sudan",
+      "flag": "https://flagcdn.com/w320/ss.png",
+      "created_at": "2026-04-23T17:38:26.101Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 67,
+    "fields": {
+      "name": "China",
+      "flag": "https://flagcdn.com/w320/cn.png",
+      "created_at": "2026-04-23T17:38:26.107Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 68,
+    "fields": {
+      "name": "India",
+      "flag": "https://flagcdn.com/w320/in.png",
+      "created_at": "2026-04-23T17:38:26.113Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 69,
+    "fields": {
+      "name": "Indonesia",
+      "flag": "https://flagcdn.com/w320/id.png",
+      "created_at": "2026-04-23T17:38:26.119Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 70,
+    "fields": {
+      "name": "Pakistan",
+      "flag": "https://flagcdn.com/w320/pk.png",
+      "created_at": "2026-04-23T17:38:26.125Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 71,
+    "fields": {
+      "name": "Bangladesh",
+      "flag": "https://flagcdn.com/w320/bd.png",
+      "created_at": "2026-04-23T17:38:26.132Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 72,
+    "fields": {
+      "name": "Japan",
+      "flag": "https://flagcdn.com/w320/jp.png",
+      "created_at": "2026-04-23T17:38:26.138Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 73,
+    "fields": {
+      "name": "Philippines",
+      "flag": "https://flagcdn.com/w320/ph.png",
+      "created_at": "2026-04-23T17:38:26.145Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 74,
+    "fields": {
+      "name": "Vietnam",
+      "flag": "https://flagcdn.com/w320/vn.png",
+      "created_at": "2026-04-23T17:38:26.152Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 75,
+    "fields": {
+      "name": "Turkey",
+      "flag": "https://flagcdn.com/w320/tr.png",
+      "created_at": "2026-04-23T17:38:26.159Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 76,
+    "fields": {
+      "name": "Iran",
+      "flag": "https://flagcdn.com/w320/ir.png",
+      "created_at": "2026-04-23T17:38:26.165Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 77,
+    "fields": {
+      "name": "Thailand",
+      "flag": "https://flagcdn.com/w320/th.png",
+      "created_at": "2026-04-23T17:38:26.172Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 78,
+    "fields": {
+      "name": "Myanmar",
+      "flag": "https://flagcdn.com/w320/mm.png",
+      "created_at": "2026-04-23T17:38:26.178Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 79,
+    "fields": {
+      "name": "South Korea",
+      "flag": "https://flagcdn.com/w320/kr.png",
+      "created_at": "2026-04-23T17:38:26.185Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 80,
+    "fields": {
+      "name": "Malaysia",
+      "flag": "https://flagcdn.com/w320/my.png",
+      "created_at": "2026-04-23T17:38:26.191Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 81,
+    "fields": {
+      "name": "Uzbekistan",
+      "flag": "https://flagcdn.com/w320/uz.png",
+      "created_at": "2026-04-23T17:38:26.198Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 82,
+    "fields": {
+      "name": "Afghanistan",
+      "flag": "https://flagcdn.com/w320/af.png",
+      "created_at": "2026-04-23T17:38:26.204Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 83,
+    "fields": {
+      "name": "Nepal",
+      "flag": "https://flagcdn.com/w320/np.png",
+      "created_at": "2026-04-23T17:38:26.210Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 84,
+    "fields": {
+      "name": "Sri Lanka",
+      "flag": "https://flagcdn.com/w320/lk.png",
+      "created_at": "2026-04-23T17:38:26.218Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 85,
+    "fields": {
+      "name": "Cambodia",
+      "flag": "https://flagcdn.com/w320/kh.png",
+      "created_at": "2026-04-23T17:38:26.224Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 86,
+    "fields": {
+      "name": "Laos",
+      "flag": "https://flagcdn.com/w320/la.png",
+      "created_at": "2026-04-23T17:38:26.231Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 87,
+    "fields": {
+      "name": "Singapore",
+      "flag": "https://flagcdn.com/w320/sg.png",
+      "created_at": "2026-04-23T17:38:26.237Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 88,
+    "fields": {
+      "name": "Brunei",
+      "flag": "https://flagcdn.com/w320/bn.png",
+      "created_at": "2026-04-23T17:38:26.243Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 89,
+    "fields": {
+      "name": "Maldives",
+      "flag": "https://flagcdn.com/w320/mv.png",
+      "created_at": "2026-04-23T17:38:26.250Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 90,
+    "fields": {
+      "name": "Bhutan",
+      "flag": "https://flagcdn.com/w320/bt.png",
+      "created_at": "2026-04-23T17:38:26.256Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 91,
+    "fields": {
+      "name": "Mongolia",
+      "flag": "https://flagcdn.com/w320/mn.png",
+      "created_at": "2026-04-23T17:38:26.263Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 92,
+    "fields": {
+      "name": "Kazakhstan",
+      "flag": "https://flagcdn.com/w320/kz.png",
+      "created_at": "2026-04-23T17:38:26.270Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 93,
+    "fields": {
+      "name": "Kyrgyzstan",
+      "flag": "https://flagcdn.com/w320/kg.png",
+      "created_at": "2026-04-23T17:38:26.276Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 94,
+    "fields": {
+      "name": "Tajikistan",
+      "flag": "https://flagcdn.com/w320/tj.png",
+      "created_at": "2026-04-23T17:38:26.282Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 95,
+    "fields": {
+      "name": "Turkmenistan",
+      "flag": "https://flagcdn.com/w320/tm.png",
+      "created_at": "2026-04-23T17:38:26.288Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 96,
+    "fields": {
+      "name": "Azerbaijan",
+      "flag": "https://flagcdn.com/w320/az.png",
+      "created_at": "2026-04-23T17:38:26.295Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 97,
+    "fields": {
+      "name": "Armenia",
+      "flag": "https://flagcdn.com/w320/am.png",
+      "created_at": "2026-04-23T17:38:26.302Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 98,
+    "fields": {
+      "name": "Georgia",
+      "flag": "https://flagcdn.com/w320/ge.png",
+      "created_at": "2026-04-23T17:38:26.307Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 99,
+    "fields": {
+      "name": "Israel",
+      "flag": "https://flagcdn.com/w320/il.png",
+      "created_at": "2026-04-23T17:38:26.314Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 100,
+    "fields": {
+      "name": "Cyprus",
+      "flag": "https://flagcdn.com/w320/cy.png",
+      "created_at": "2026-04-23T17:38:26.320Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 101,
+    "fields": {
+      "name": "North Korea",
+      "flag": "https://flagcdn.com/w320/kp.png",
+      "created_at": "2026-04-23T17:38:26.326Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 102,
+    "fields": {
+      "name": "Taiwan",
+      "flag": "https://flagcdn.com/w320/tw.png",
+      "created_at": "2026-04-23T17:38:26.333Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 103,
+    "fields": {
+      "name": "East Timor",
+      "flag": "https://flagcdn.com/w320/tl.png",
+      "created_at": "2026-04-23T17:38:26.339Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 104,
+    "fields": {
+      "name": "Russia",
+      "flag": "https://flagcdn.com/w320/ru.png",
+      "created_at": "2026-04-23T17:38:26.346Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 105,
+    "fields": {
+      "name": "Germany",
+      "flag": "https://flagcdn.com/w320/de.png",
+      "created_at": "2026-04-23T17:38:26.353Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 106,
+    "fields": {
+      "name": "United Kingdom",
+      "flag": "https://flagcdn.com/w320/gb.png",
+      "created_at": "2026-04-23T17:38:26.359Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 107,
+    "fields": {
+      "name": "France",
+      "flag": "https://flagcdn.com/w320/fr.png",
+      "created_at": "2026-04-23T17:38:26.365Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 108,
+    "fields": {
+      "name": "Italy",
+      "flag": "https://flagcdn.com/w320/it.png",
+      "created_at": "2026-04-23T17:38:26.371Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 109,
+    "fields": {
+      "name": "Spain",
+      "flag": "https://flagcdn.com/w320/es.png",
+      "created_at": "2026-04-23T17:38:26.378Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 110,
+    "fields": {
+      "name": "Ukraine",
+      "flag": "https://flagcdn.com/w320/ua.png",
+      "created_at": "2026-04-23T17:38:26.385Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 111,
+    "fields": {
+      "name": "Poland",
+      "flag": "https://flagcdn.com/w320/pl.png",
+      "created_at": "2026-04-23T17:38:26.391Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 112,
+    "fields": {
+      "name": "Romania",
+      "flag": "https://flagcdn.com/w320/ro.png",
+      "created_at": "2026-04-23T17:38:26.398Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 113,
+    "fields": {
+      "name": "Netherlands",
+      "flag": "https://flagcdn.com/w320/nl.png",
+      "created_at": "2026-04-23T17:38:26.404Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 114,
+    "fields": {
+      "name": "Belgium",
+      "flag": "https://flagcdn.com/w320/be.png",
+      "created_at": "2026-04-23T17:38:26.411Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 115,
+    "fields": {
+      "name": "Czech Republic",
+      "flag": "https://flagcdn.com/w320/cz.png",
+      "created_at": "2026-04-23T17:38:26.417Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 116,
+    "fields": {
+      "name": "Greece",
+      "flag": "https://flagcdn.com/w320/gr.png",
+      "created_at": "2026-04-23T17:38:26.424Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 117,
+    "fields": {
+      "name": "Portugal",
+      "flag": "https://flagcdn.com/w320/pt.png",
+      "created_at": "2026-04-23T17:38:26.432Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 118,
+    "fields": {
+      "name": "Sweden",
+      "flag": "https://flagcdn.com/w320/se.png",
+      "created_at": "2026-04-23T17:38:26.438Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 119,
+    "fields": {
+      "name": "Hungary",
+      "flag": "https://flagcdn.com/w320/hu.png",
+      "created_at": "2026-04-23T17:38:26.444Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 120,
+    "fields": {
+      "name": "Austria",
+      "flag": "https://flagcdn.com/w320/at.png",
+      "created_at": "2026-04-23T17:38:26.451Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 121,
+    "fields": {
+      "name": "Belarus",
+      "flag": "https://flagcdn.com/w320/by.png",
+      "created_at": "2026-04-23T17:38:26.457Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 122,
+    "fields": {
+      "name": "Switzerland",
+      "flag": "https://flagcdn.com/w320/ch.png",
+      "created_at": "2026-04-23T17:38:26.465Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 123,
+    "fields": {
+      "name": "Bulgaria",
+      "flag": "https://flagcdn.com/w320/bg.png",
+      "created_at": "2026-04-23T17:38:26.470Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 124,
+    "fields": {
+      "name": "Serbia",
+      "flag": "https://flagcdn.com/w320/rs.png",
+      "created_at": "2026-04-23T17:38:26.476Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 125,
+    "fields": {
+      "name": "Denmark",
+      "flag": "https://flagcdn.com/w320/dk.png",
+      "created_at": "2026-04-23T17:38:26.483Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 126,
+    "fields": {
+      "name": "Finland",
+      "flag": "https://flagcdn.com/w320/fi.png",
+      "created_at": "2026-04-23T17:38:26.490Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 127,
+    "fields": {
+      "name": "Slovakia",
+      "flag": "https://flagcdn.com/w320/sk.png",
+      "created_at": "2026-04-23T17:38:26.496Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 128,
+    "fields": {
+      "name": "Norway",
+      "flag": "https://flagcdn.com/w320/no.png",
+      "created_at": "2026-04-23T17:38:26.504Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 129,
+    "fields": {
+      "name": "Ireland",
+      "flag": "https://flagcdn.com/w320/ie.png",
+      "created_at": "2026-04-23T17:38:26.509Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 130,
+    "fields": {
+      "name": "Croatia",
+      "flag": "https://flagcdn.com/w320/hr.png",
+      "created_at": "2026-04-23T17:38:26.517Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 131,
+    "fields": {
+      "name": "Bosnia and Herzegovina",
+      "flag": "https://flagcdn.com/w320/ba.png",
+      "created_at": "2026-04-23T17:38:26.524Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 132,
+    "fields": {
+      "name": "Albania",
+      "flag": "https://flagcdn.com/w320/al.png",
+      "created_at": "2026-04-23T17:38:26.530Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 133,
+    "fields": {
+      "name": "Lithuania",
+      "flag": "https://flagcdn.com/w320/lt.png",
+      "created_at": "2026-04-23T17:38:26.537Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 134,
+    "fields": {
+      "name": "Slovenia",
+      "flag": "https://flagcdn.com/w320/si.png",
+      "created_at": "2026-04-23T17:38:26.544Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 135,
+    "fields": {
+      "name": "Latvia",
+      "flag": "https://flagcdn.com/w320/lv.png",
+      "created_at": "2026-04-23T17:38:26.551Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 136,
+    "fields": {
+      "name": "Estonia",
+      "flag": "https://flagcdn.com/w320/ee.png",
+      "created_at": "2026-04-23T17:38:26.557Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 137,
+    "fields": {
+      "name": "Moldova",
+      "flag": "https://flagcdn.com/w320/md.png",
+      "created_at": "2026-04-23T17:38:26.564Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 138,
+    "fields": {
+      "name": "Luxembourg",
+      "flag": "https://flagcdn.com/w320/lu.png",
+      "created_at": "2026-04-23T17:38:26.570Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 139,
+    "fields": {
+      "name": "Malta",
+      "flag": "https://flagcdn.com/w320/mt.png",
+      "created_at": "2026-04-23T17:38:26.576Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 140,
+    "fields": {
+      "name": "Iceland",
+      "flag": "https://flagcdn.com/w320/is.png",
+      "created_at": "2026-04-23T17:38:26.584Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 141,
+    "fields": {
+      "name": "Montenegro",
+      "flag": "https://flagcdn.com/w320/me.png",
+      "created_at": "2026-04-23T17:38:26.590Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 142,
+    "fields": {
+      "name": "North Macedonia",
+      "flag": "https://flagcdn.com/w320/mk.png",
+      "created_at": "2026-04-23T17:38:26.598Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 143,
+    "fields": {
+      "name": "Andorra",
+      "flag": "https://flagcdn.com/w320/ad.png",
+      "created_at": "2026-04-23T17:38:26.604Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 144,
+    "fields": {
+      "name": "Monaco",
+      "flag": "https://flagcdn.com/w320/mc.png",
+      "created_at": "2026-04-23T17:38:26.610Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 145,
+    "fields": {
+      "name": "Liechtenstein",
+      "flag": "https://flagcdn.com/w320/li.png",
+      "created_at": "2026-04-23T17:38:26.618Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 146,
+    "fields": {
+      "name": "San Marino",
+      "flag": "https://flagcdn.com/w320/sm.png",
+      "created_at": "2026-04-23T17:38:26.624Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 147,
+    "fields": {
+      "name": "Vatican City",
+      "flag": "https://flagcdn.com/w320/va.png",
+      "created_at": "2026-04-23T17:38:26.630Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 148,
+    "fields": {
+      "name": "United States",
+      "flag": "https://flagcdn.com/w320/us.png",
+      "created_at": "2026-04-23T17:38:26.637Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 149,
+    "fields": {
+      "name": "Canada",
+      "flag": "https://flagcdn.com/w320/ca.png",
+      "created_at": "2026-04-23T17:38:26.644Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 150,
+    "fields": {
+      "name": "Mexico",
+      "flag": "https://flagcdn.com/w320/mx.png",
+      "created_at": "2026-04-23T17:38:26.650Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 151,
+    "fields": {
+      "name": "Guatemala",
+      "flag": "https://flagcdn.com/w320/gt.png",
+      "created_at": "2026-04-23T17:38:26.656Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 152,
+    "fields": {
+      "name": "Cuba",
+      "flag": "https://flagcdn.com/w320/cu.png",
+      "created_at": "2026-04-23T17:38:26.663Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 153,
+    "fields": {
+      "name": "Haiti",
+      "flag": "https://flagcdn.com/w320/ht.png",
+      "created_at": "2026-04-23T17:38:26.669Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 154,
+    "fields": {
+      "name": "Dominican Republic",
+      "flag": "https://flagcdn.com/w320/do.png",
+      "created_at": "2026-04-23T17:38:26.675Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 155,
+    "fields": {
+      "name": "Honduras",
+      "flag": "https://flagcdn.com/w320/hn.png",
+      "created_at": "2026-04-23T17:38:26.681Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 156,
+    "fields": {
+      "name": "Nicaragua",
+      "flag": "https://flagcdn.com/w320/ni.png",
+      "created_at": "2026-04-23T17:38:26.688Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 157,
+    "fields": {
+      "name": "Costa Rica",
+      "flag": "https://flagcdn.com/w320/cr.png",
+      "created_at": "2026-04-23T17:38:26.696Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 158,
+    "fields": {
+      "name": "Panama",
+      "flag": "https://flagcdn.com/w320/pa.png",
+      "created_at": "2026-04-23T17:38:26.703Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 159,
+    "fields": {
+      "name": "El Salvador",
+      "flag": "https://flagcdn.com/w320/sv.png",
+      "created_at": "2026-04-23T17:38:26.710Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 160,
+    "fields": {
+      "name": "Belize",
+      "flag": "https://flagcdn.com/w320/bz.png",
+      "created_at": "2026-04-23T17:38:26.718Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 161,
+    "fields": {
+      "name": "Jamaica",
+      "flag": "https://flagcdn.com/w320/jm.png",
+      "created_at": "2026-04-23T17:38:26.724Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 162,
+    "fields": {
+      "name": "Trinidad and Tobago",
+      "flag": "https://flagcdn.com/w320/tt.png",
+      "created_at": "2026-04-23T17:38:26.731Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 163,
+    "fields": {
+      "name": "Bahamas",
+      "flag": "https://flagcdn.com/w320/bs.png",
+      "created_at": "2026-04-23T17:38:26.737Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 164,
+    "fields": {
+      "name": "Barbados",
+      "flag": "https://flagcdn.com/w320/bb.png",
+      "created_at": "2026-04-23T17:38:26.744Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 165,
+    "fields": {
+      "name": "Saint Lucia",
+      "flag": "https://flagcdn.com/w320/lc.png",
+      "created_at": "2026-04-23T17:38:26.751Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 166,
+    "fields": {
+      "name": "Grenada",
+      "flag": "https://flagcdn.com/w320/gd.png",
+      "created_at": "2026-04-23T17:38:26.757Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 167,
+    "fields": {
+      "name": "Saint Vincent and the Grenadines",
+      "flag": "https://flagcdn.com/w320/vc.png",
+      "created_at": "2026-04-23T17:38:26.764Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 168,
+    "fields": {
+      "name": "Antigua and Barbuda",
+      "flag": "https://flagcdn.com/w320/ag.png",
+      "created_at": "2026-04-23T17:38:26.770Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 169,
+    "fields": {
+      "name": "Dominica",
+      "flag": "https://flagcdn.com/w320/dm.png",
+      "created_at": "2026-04-23T17:38:26.813Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 170,
+    "fields": {
+      "name": "Saint Kitts and Nevis",
+      "flag": "https://flagcdn.com/w320/kn.png",
+      "created_at": "2026-04-23T17:38:26.819Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 171,
+    "fields": {
+      "name": "Brazil",
+      "flag": "https://flagcdn.com/w320/br.png",
+      "created_at": "2026-04-23T17:38:26.833Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 172,
+    "fields": {
+      "name": "Colombia",
+      "flag": "https://flagcdn.com/w320/co.png",
+      "created_at": "2026-04-23T17:38:26.839Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 173,
+    "fields": {
+      "name": "Argentina",
+      "flag": "https://flagcdn.com/w320/ar.png",
+      "created_at": "2026-04-23T17:38:26.845Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 174,
+    "fields": {
+      "name": "Peru",
+      "flag": "https://flagcdn.com/w320/pe.png",
+      "created_at": "2026-04-23T17:38:26.852Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 175,
+    "fields": {
+      "name": "Venezuela",
+      "flag": "https://flagcdn.com/w320/ve.png",
+      "created_at": "2026-04-23T17:38:26.857Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 176,
+    "fields": {
+      "name": "Chile",
+      "flag": "https://flagcdn.com/w320/cl.png",
+      "created_at": "2026-04-23T17:38:26.864Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 177,
+    "fields": {
+      "name": "Ecuador",
+      "flag": "https://flagcdn.com/w320/ec.png",
+      "created_at": "2026-04-23T17:38:26.870Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 178,
+    "fields": {
+      "name": "Bolivia",
+      "flag": "https://flagcdn.com/w320/bo.png",
+      "created_at": "2026-04-23T17:38:26.877Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 179,
+    "fields": {
+      "name": "Paraguay",
+      "flag": "https://flagcdn.com/w320/py.png",
+      "created_at": "2026-04-23T17:38:26.882Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 180,
+    "fields": {
+      "name": "Uruguay",
+      "flag": "https://flagcdn.com/w320/uy.png",
+      "created_at": "2026-04-23T17:38:26.888Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 181,
+    "fields": {
+      "name": "Guyana",
+      "flag": "https://flagcdn.com/w320/gy.png",
+      "created_at": "2026-04-23T17:38:26.895Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 182,
+    "fields": {
+      "name": "Suriname",
+      "flag": "https://flagcdn.com/w320/sr.png",
+      "created_at": "2026-04-23T17:38:26.901Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 183,
+    "fields": {
+      "name": "Australia",
+      "flag": "https://flagcdn.com/w320/au.png",
+      "created_at": "2026-04-23T17:38:26.908Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 184,
+    "fields": {
+      "name": "Papua New Guinea",
+      "flag": "https://flagcdn.com/w320/pg.png",
+      "created_at": "2026-04-23T17:38:26.915Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 185,
+    "fields": {
+      "name": "New Zealand",
+      "flag": "https://flagcdn.com/w320/nz.png",
+      "created_at": "2026-04-23T17:38:26.921Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 186,
+    "fields": {
+      "name": "Fiji",
+      "flag": "https://flagcdn.com/w320/fj.png",
+      "created_at": "2026-04-23T17:38:26.927Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 187,
+    "fields": {
+      "name": "Solomon Islands",
+      "flag": "https://flagcdn.com/w320/sb.png",
+      "created_at": "2026-04-23T17:38:26.933Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 188,
+    "fields": {
+      "name": "Vanuatu",
+      "flag": "https://flagcdn.com/w320/vu.png",
+      "created_at": "2026-04-23T17:38:26.938Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 189,
+    "fields": {
+      "name": "Samoa",
+      "flag": "https://flagcdn.com/w320/ws.png",
+      "created_at": "2026-04-23T17:38:26.946Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 190,
+    "fields": {
+      "name": "Micronesia",
+      "flag": "https://flagcdn.com/w320/fm.png",
+      "created_at": "2026-04-23T17:38:26.952Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 191,
+    "fields": {
+      "name": "Tonga",
+      "flag": "https://flagcdn.com/w320/to.png",
+      "created_at": "2026-04-23T17:38:26.958Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 192,
+    "fields": {
+      "name": "Kiribati",
+      "flag": "https://flagcdn.com/w320/ki.png",
+      "created_at": "2026-04-23T17:38:26.965Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 193,
+    "fields": {
+      "name": "Palau",
+      "flag": "https://flagcdn.com/w320/pw.png",
+      "created_at": "2026-04-23T17:38:26.971Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 194,
+    "fields": {
+      "name": "Marshall Islands",
+      "flag": "https://flagcdn.com/w320/mh.png",
+      "created_at": "2026-04-23T17:38:26.976Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 195,
+    "fields": {
+      "name": "Tuvalu",
+      "flag": "https://flagcdn.com/w320/tv.png",
+      "created_at": "2026-04-23T17:38:26.983Z"
+    }
+  },
+  {
+    "model": "plants.country",
+    "pk": 196,
+    "fields": {
+      "name": "Nauru",
+      "flag": "https://flagcdn.com/w320/nr.png",
+      "created_at": "2026-04-23T17:38:26.989Z"
+    }
+  },
+  {
+    "model": "plants.category",
+    "pk": 1,
+    "fields": {
+      "name": "Indoor Plants",
+      "created_at": "2026-04-22T20:42:40.676Z"
+    }
+  },
+  {
+    "model": "plants.category",
+    "pk": 2,
+    "fields": {
+      "name": "Outdoor Plants",
+      "created_at": "2026-04-22T20:42:40.685Z"
+    }
+  },
+  {
+    "model": "plants.category",
+    "pk": 3,
+    "fields": {
+      "name": "Herbs",
+      "created_at": "2026-04-22T20:42:40.692Z"
+    }
+  },
+  {
+    "model": "plants.category",
+    "pk": 4,
+    "fields": {
+      "name": "Fruits",
+      "created_at": "2026-04-22T20:42:40.699Z"
+    }
+  },
+  {
+    "model": "plants.category",
+    "pk": 5,
+    "fields": {
+      "name": "Vegetables",
+      "created_at": "2026-04-22T20:42:40.707Z"
+    }
+  },
+  {
+    "model": "plants.category",
+    "pk": 6,
+    "fields": {
+      "name": "Medicinal Plants",
+      "created_at": "2026-04-22T20:42:40.717Z"
+    }
+  },
+  {
+    "model": "plants.category",
+    "pk": 7,
+    "fields": {
+      "name": "Flowering Plants",
+      "created_at": "2026-04-22T20:42:40.724Z"
+    }
+  },
+  {
+    "model": "plants.category",
+    "pk": 8,
+    "fields": {
+      "name": "Succulents",
+      "created_at": "2026-04-22T20:42:40.732Z"
+    }
+  },
+  {
+    "model": "plants.plant",
+    "pk": 1,
+    "fields": {
+      "name": "Monstera Deliciosa",
+      "scientific_name": "Monstera deliciosa",
+      "description": "A popular indoor plant known for its large, split leaves. Easy to care for and grows quickly in bright, indirect light.",
+      "image_url": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500",
+      "category": 1,
+      "is_edible": false,
+      "sunlight": "Bright, indirect light",
+      "water_needs": "Water when top soil is dry",
+      "views_count": 2,
+      "created_at": "2026-04-22T20:42:40.744Z",
+      "countries": []
+    }
+  },
+  {
+    "model": "plants.plant",
+    "pk": 2,
+    "fields": {
+      "name": "Snake Plant",
+      "scientific_name": "Sansevieria trifasciata",
+      "description": "An extremely hardy indoor plant that can tolerate low light and infrequent watering. Perfect for beginners.",
+      "image_url": "https://images.unsplash.com/photo-1593691509543-c55fb32d8de5?w=500",
+      "category": 1,
+      "is_edible": false,
+      "sunlight": "Low to bright light",
+      "water_needs": "Water every 2-3 weeks",
+      "views_count": 0,
+      "created_at": "2026-04-22T20:42:40.752Z",
+      "countries": []
+    }
+  },
+  {
+    "model": "plants.plant",
+    "pk": 3,
+    "fields": {
+      "name": "Basil",
+      "scientific_name": "Ocimum basilicum",
+      "description": "A fragrant herb commonly used in cooking. Easy to grow and perfect for kitchen gardens.",
+      "image_url": "https://images.unsplash.com/photo-1618164436241-4473940d1f5c?w=500",
+      "category": 3,
+      "is_edible": true,
+      "sunlight": "Full sun",
+      "water_needs": "Keep soil consistently moist",
+      "views_count": 3,
+      "created_at": "2026-04-22T20:42:40.760Z",
+      "countries": []
+    }
+  },
+  {
+    "model": "plants.plant",
+    "pk": 4,
+    "fields": {
+      "name": "Aloe Vera",
+      "scientific_name": "Aloe barbadensis miller",
+      "description": "A succulent plant with medicinal properties. The gel inside the leaves can be used for skin care.",
+      "image_url": "https://images.unsplash.com/photo-1509587584298-0f3b3a3a1797?w=500",
+      "category": 8,
+      "is_edible": false,
+      "sunlight": "Bright, indirect light",
+      "water_needs": "Water deeply but infrequently",
+      "views_count": 21,
+      "created_at": "2026-04-22T20:42:40.793Z",
+      "countries": [
+        167,
+        189,
+        1
+      ]
+    }
+  },
+  {
+    "model": "plants.plant",
+    "pk": 5,
+    "fields": {
+      "name": "Rose Bush",
+      "scientific_name": "Rosa rubiginosa",
+      "description": "Classic flowering plant perfect for outdoor gardens. Produces beautiful, fragrant flowers.",
+      "image_url": "https://images.unsplash.com/photo-1611859328053-3cbc9f9399f4?q=80&w=1026&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "category": 2,
+      "is_edible": false,
+      "sunlight": "Full sun",
+      "water_needs": "Regular watering, avoid wetting leaves",
+      "views_count": 3,
+      "created_at": "2026-04-22T20:42:40.819Z",
+      "countries": []
+    }
+  },
+  {
+    "model": "plants.plantimage",
+    "pk": 1,
+    "fields": {
+      "plant": 4,
+      "image_url": "https://images.unsplash.com/photo-1611859328053-3cbc9f9399f4?q=80&w=1026&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "caption": "",
+      "is_primary": false,
+      "created_at": "2026-04-22T20:58:13.608Z"
+    }
+  },
+  {
+    "model": "plants.comment",
+    "pk": 1,
+    "fields": {
+      "plant": 4,
+      "user": [
+        "jihad7x"
+      ],
+      "name": "jihad7x",
+      "content": "testtttt",
+      "created_at": "2026-04-22T21:03:15.244Z"
+    }
+  },
+  {
+    "model": "plants.rating",
+    "pk": 1,
+    "fields": {
+      "plant": 4,
+      "user": [
+        "jihad7x"
+      ],
+      "name": "jihad7x",
+      "score": 5,
+      "created_at": "2026-04-22T21:03:22.189Z"
+    }
+  },
+  {
+    "model": "plants.rating",
+    "pk": 2,
+    "fields": {
+      "plant": 3,
+      "user": [
+        "jihad7x"
+      ],
+      "name": "jihad7x",
+      "score": 4,
+      "created_at": "2026-04-22T21:44:28.047Z"
+    }
+  },
+  {
+    "model": "plants.favorite",
+    "pk": 3,
+    "fields": {
+      "user": [
+        "jihad7x"
+      ],
+      "plant": 2,
+      "created_at": "2026-04-22T21:02:47.946Z"
+    }
+  },
+  {
+    "model": "plants.favorite",
+    "pk": 4,
+    "fields": {
+      "user": [
+        "jihad7x"
+      ],
+      "plant": 4,
+      "created_at": "2026-04-22T21:44:11.502Z"
+    }
+  },
+  {
+    "model": "plants.favorite",
+    "pk": 5,
+    "fields": {
+      "user": [
+        "jihad7x"
+      ],
+      "plant": 3,
+      "created_at": "2026-04-22T21:44:12.797Z"
+    }
   }
-},
-{
-  "model": "auth.user",
-  "fields": {
-    "password": "pbkdf2_sha256$720000$6a6NUdWjwrgM4Gf2catFOF$AE2CJy0BvlzyFgpqxDmprqmqGxndRqIN/Nn2M0YCNjI=",
-    "last_login": "2026-04-22T21:44:04.506Z",
-    "is_superuser": false,
-    "username": "jihad7x",
-    "first_name": "",
-    "last_name": "",
-    "email": "",
-    "is_staff": false,
-    "is_active": true,
-    "date_joined": "2026-04-22T21:02:38.042Z",
-    "groups": [],
-    "user_permissions": []
-  }
-},
-{
-  "model": "sessions.session",
-  "pk": "af1ewkgraaka61oylwpdh93lhog7umuv",
-  "fields": {
-    "session_data": ".eJxVjEEOwiAQRe_C2hBgQMGl-56BzMAgVUOT0q6Md7dNutDtf-_9t4i4LjWunec4ZnEVRpx-N8L05LaD_MB2n2Sa2jKPJHdFHrTLYcr8uh3u30HFXrc6AAeLyRpi0mBZF6OU8zqgzil4B5cALhFAUkqV4DdyJmTMrgCT8-LzBdLVN6I:1wFfMa:qfDl2tdGo47h8B--WsrdDY64GAEaCgw75Mmj3eRe8lQ",
-    "expire_date": "2026-05-06T21:44:04.514Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 1,
-  "fields": {
-    "name": "Saudi Arabia",
-    "flag": "https://flagcdn.com/w320/sa.png",
-    "created_at": "2026-04-23T17:38:25.578Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 2,
-  "fields": {
-    "name": "United Arab Emirates",
-    "flag": "https://flagcdn.com/w320/ae.png",
-    "created_at": "2026-04-23T17:38:25.587Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 3,
-  "fields": {
-    "name": "Egypt",
-    "flag": "https://flagcdn.com/w320/eg.png",
-    "created_at": "2026-04-23T17:38:25.595Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 4,
-  "fields": {
-    "name": "Jordan",
-    "flag": "https://flagcdn.com/w320/jo.png",
-    "created_at": "2026-04-23T17:38:25.602Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 5,
-  "fields": {
-    "name": "Lebanon",
-    "flag": "https://flagcdn.com/w320/lb.png",
-    "created_at": "2026-04-23T17:38:25.611Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 6,
-  "fields": {
-    "name": "Syria",
-    "flag": "https://flagcdn.com/w320/sy.png",
-    "created_at": "2026-04-23T17:38:25.618Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 7,
-  "fields": {
-    "name": "Iraq",
-    "flag": "https://flagcdn.com/w320/iq.png",
-    "created_at": "2026-04-23T17:38:25.626Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 8,
-  "fields": {
-    "name": "Kuwait",
-    "flag": "https://flagcdn.com/w320/kw.png",
-    "created_at": "2026-04-23T17:38:25.634Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 9,
-  "fields": {
-    "name": "Qatar",
-    "flag": "https://flagcdn.com/w320/qa.png",
-    "created_at": "2026-04-23T17:38:25.641Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 10,
-  "fields": {
-    "name": "Bahrain",
-    "flag": "https://flagcdn.com/w320/bh.png",
-    "created_at": "2026-04-23T17:38:25.649Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 11,
-  "fields": {
-    "name": "Oman",
-    "flag": "https://flagcdn.com/w320/om.png",
-    "created_at": "2026-04-23T17:38:25.657Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 12,
-  "fields": {
-    "name": "Yemen",
-    "flag": "https://flagcdn.com/w320/ye.png",
-    "created_at": "2026-04-23T17:38:25.665Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 13,
-  "fields": {
-    "name": "Morocco",
-    "flag": "https://flagcdn.com/w320/ma.png",
-    "created_at": "2026-04-23T17:38:25.678Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 14,
-  "fields": {
-    "name": "Algeria",
-    "flag": "https://flagcdn.com/w320/dz.png",
-    "created_at": "2026-04-23T17:38:25.691Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 15,
-  "fields": {
-    "name": "Tunisia",
-    "flag": "https://flagcdn.com/w320/tn.png",
-    "created_at": "2026-04-23T17:38:25.698Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 16,
-  "fields": {
-    "name": "Libya",
-    "flag": "https://flagcdn.com/w320/ly.png",
-    "created_at": "2026-04-23T17:38:25.716Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 17,
-  "fields": {
-    "name": "Sudan",
-    "flag": "https://flagcdn.com/w320/sd.png",
-    "created_at": "2026-04-23T17:38:25.723Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 18,
-  "fields": {
-    "name": "Palestine",
-    "flag": "https://flagcdn.com/w320/ps.png",
-    "created_at": "2026-04-23T17:38:25.730Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 19,
-  "fields": {
-    "name": "Somalia",
-    "flag": "https://flagcdn.com/w320/so.png",
-    "created_at": "2026-04-23T17:38:25.738Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 20,
-  "fields": {
-    "name": "Djibouti",
-    "flag": "https://flagcdn.com/w320/dj.png",
-    "created_at": "2026-04-23T17:38:25.747Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 21,
-  "fields": {
-    "name": "Comoros",
-    "flag": "https://flagcdn.com/w320/km.png",
-    "created_at": "2026-04-23T17:38:25.789Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 22,
-  "fields": {
-    "name": "Mauritania",
-    "flag": "https://flagcdn.com/w320/mr.png",
-    "created_at": "2026-04-23T17:38:25.797Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 23,
-  "fields": {
-    "name": "South Africa",
-    "flag": "https://flagcdn.com/w320/za.png",
-    "created_at": "2026-04-23T17:38:25.809Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 24,
-  "fields": {
-    "name": "Nigeria",
-    "flag": "https://flagcdn.com/w320/ng.png",
-    "created_at": "2026-04-23T17:38:25.818Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 25,
-  "fields": {
-    "name": "Kenya",
-    "flag": "https://flagcdn.com/w320/ke.png",
-    "created_at": "2026-04-23T17:38:25.826Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 26,
-  "fields": {
-    "name": "Ethiopia",
-    "flag": "https://flagcdn.com/w320/et.png",
-    "created_at": "2026-04-23T17:38:25.833Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 27,
-  "fields": {
-    "name": "Ghana",
-    "flag": "https://flagcdn.com/w320/gh.png",
-    "created_at": "2026-04-23T17:38:25.839Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 28,
-  "fields": {
-    "name": "Tanzania",
-    "flag": "https://flagcdn.com/w320/tz.png",
-    "created_at": "2026-04-23T17:38:25.846Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 29,
-  "fields": {
-    "name": "Uganda",
-    "flag": "https://flagcdn.com/w320/ug.png",
-    "created_at": "2026-04-23T17:38:25.853Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 30,
-  "fields": {
-    "name": "Madagascar",
-    "flag": "https://flagcdn.com/w320/mg.png",
-    "created_at": "2026-04-23T17:38:25.860Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 31,
-  "fields": {
-    "name": "Cameroon",
-    "flag": "https://flagcdn.com/w320/cm.png",
-    "created_at": "2026-04-23T17:38:25.867Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 32,
-  "fields": {
-    "name": "Ivory Coast",
-    "flag": "https://flagcdn.com/w320/ci.png",
-    "created_at": "2026-04-23T17:38:25.874Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 33,
-  "fields": {
-    "name": "Angola",
-    "flag": "https://flagcdn.com/w320/ao.png",
-    "created_at": "2026-04-23T17:38:25.880Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 34,
-  "fields": {
-    "name": "Mozambique",
-    "flag": "https://flagcdn.com/w320/mz.png",
-    "created_at": "2026-04-23T17:38:25.886Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 35,
-  "fields": {
-    "name": "Zambia",
-    "flag": "https://flagcdn.com/w320/zm.png",
-    "created_at": "2026-04-23T17:38:25.892Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 36,
-  "fields": {
-    "name": "Zimbabwe",
-    "flag": "https://flagcdn.com/w320/zw.png",
-    "created_at": "2026-04-23T17:38:25.899Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 37,
-  "fields": {
-    "name": "Botswana",
-    "flag": "https://flagcdn.com/w320/bw.png",
-    "created_at": "2026-04-23T17:38:25.906Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 38,
-  "fields": {
-    "name": "Namibia",
-    "flag": "https://flagcdn.com/w320/na.png",
-    "created_at": "2026-04-23T17:38:25.912Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 39,
-  "fields": {
-    "name": "Mali",
-    "flag": "https://flagcdn.com/w320/ml.png",
-    "created_at": "2026-04-23T17:38:25.919Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 40,
-  "fields": {
-    "name": "Burkina Faso",
-    "flag": "https://flagcdn.com/w320/bf.png",
-    "created_at": "2026-04-23T17:38:25.925Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 41,
-  "fields": {
-    "name": "Niger",
-    "flag": "https://flagcdn.com/w320/ne.png",
-    "created_at": "2026-04-23T17:38:25.932Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 42,
-  "fields": {
-    "name": "Chad",
-    "flag": "https://flagcdn.com/w320/td.png",
-    "created_at": "2026-04-23T17:38:25.938Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 43,
-  "fields": {
-    "name": "Central African Republic",
-    "flag": "https://flagcdn.com/w320/cf.png",
-    "created_at": "2026-04-23T17:38:25.946Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 44,
-  "fields": {
-    "name": "Democratic Republic of the Congo",
-    "flag": "https://flagcdn.com/w320/cd.png",
-    "created_at": "2026-04-23T17:38:25.953Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 45,
-  "fields": {
-    "name": "Republic of the Congo",
-    "flag": "https://flagcdn.com/w320/cg.png",
-    "created_at": "2026-04-23T17:38:25.959Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 46,
-  "fields": {
-    "name": "Gabon",
-    "flag": "https://flagcdn.com/w320/ga.png",
-    "created_at": "2026-04-23T17:38:25.966Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 47,
-  "fields": {
-    "name": "Equatorial Guinea",
-    "flag": "https://flagcdn.com/w320/gq.png",
-    "created_at": "2026-04-23T17:38:25.973Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 48,
-  "fields": {
-    "name": "Rwanda",
-    "flag": "https://flagcdn.com/w320/rw.png",
-    "created_at": "2026-04-23T17:38:25.981Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 49,
-  "fields": {
-    "name": "Burundi",
-    "flag": "https://flagcdn.com/w320/bi.png",
-    "created_at": "2026-04-23T17:38:25.988Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 50,
-  "fields": {
-    "name": "Malawi",
-    "flag": "https://flagcdn.com/w320/mw.png",
-    "created_at": "2026-04-23T17:38:25.994Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 51,
-  "fields": {
-    "name": "Lesotho",
-    "flag": "https://flagcdn.com/w320/ls.png",
-    "created_at": "2026-04-23T17:38:26.001Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 52,
-  "fields": {
-    "name": "Eswatini",
-    "flag": "https://flagcdn.com/w320/sz.png",
-    "created_at": "2026-04-23T17:38:26.007Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 53,
-  "fields": {
-    "name": "Senegal",
-    "flag": "https://flagcdn.com/w320/sn.png",
-    "created_at": "2026-04-23T17:38:26.013Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 54,
-  "fields": {
-    "name": "Gambia",
-    "flag": "https://flagcdn.com/w320/gm.png",
-    "created_at": "2026-04-23T17:38:26.019Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 55,
-  "fields": {
-    "name": "Guinea",
-    "flag": "https://flagcdn.com/w320/gn.png",
-    "created_at": "2026-04-23T17:38:26.026Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 56,
-  "fields": {
-    "name": "Guinea-Bissau",
-    "flag": "https://flagcdn.com/w320/gw.png",
-    "created_at": "2026-04-23T17:38:26.033Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 57,
-  "fields": {
-    "name": "Sierra Leone",
-    "flag": "https://flagcdn.com/w320/sl.png",
-    "created_at": "2026-04-23T17:38:26.043Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 58,
-  "fields": {
-    "name": "Liberia",
-    "flag": "https://flagcdn.com/w320/lr.png",
-    "created_at": "2026-04-23T17:38:26.049Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 59,
-  "fields": {
-    "name": "Togo",
-    "flag": "https://flagcdn.com/w320/tg.png",
-    "created_at": "2026-04-23T17:38:26.055Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 60,
-  "fields": {
-    "name": "Benin",
-    "flag": "https://flagcdn.com/w320/bj.png",
-    "created_at": "2026-04-23T17:38:26.062Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 61,
-  "fields": {
-    "name": "Cape Verde",
-    "flag": "https://flagcdn.com/w320/cv.png",
-    "created_at": "2026-04-23T17:38:26.068Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 62,
-  "fields": {
-    "name": "São Tomé and Príncipe",
-    "flag": "https://flagcdn.com/w320/st.png",
-    "created_at": "2026-04-23T17:38:26.075Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 63,
-  "fields": {
-    "name": "Seychelles",
-    "flag": "https://flagcdn.com/w320/sc.png",
-    "created_at": "2026-04-23T17:38:26.081Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 64,
-  "fields": {
-    "name": "Mauritius",
-    "flag": "https://flagcdn.com/w320/mu.png",
-    "created_at": "2026-04-23T17:38:26.087Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 65,
-  "fields": {
-    "name": "Eritrea",
-    "flag": "https://flagcdn.com/w320/er.png",
-    "created_at": "2026-04-23T17:38:26.093Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 66,
-  "fields": {
-    "name": "South Sudan",
-    "flag": "https://flagcdn.com/w320/ss.png",
-    "created_at": "2026-04-23T17:38:26.101Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 67,
-  "fields": {
-    "name": "China",
-    "flag": "https://flagcdn.com/w320/cn.png",
-    "created_at": "2026-04-23T17:38:26.107Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 68,
-  "fields": {
-    "name": "India",
-    "flag": "https://flagcdn.com/w320/in.png",
-    "created_at": "2026-04-23T17:38:26.113Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 69,
-  "fields": {
-    "name": "Indonesia",
-    "flag": "https://flagcdn.com/w320/id.png",
-    "created_at": "2026-04-23T17:38:26.119Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 70,
-  "fields": {
-    "name": "Pakistan",
-    "flag": "https://flagcdn.com/w320/pk.png",
-    "created_at": "2026-04-23T17:38:26.125Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 71,
-  "fields": {
-    "name": "Bangladesh",
-    "flag": "https://flagcdn.com/w320/bd.png",
-    "created_at": "2026-04-23T17:38:26.132Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 72,
-  "fields": {
-    "name": "Japan",
-    "flag": "https://flagcdn.com/w320/jp.png",
-    "created_at": "2026-04-23T17:38:26.138Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 73,
-  "fields": {
-    "name": "Philippines",
-    "flag": "https://flagcdn.com/w320/ph.png",
-    "created_at": "2026-04-23T17:38:26.145Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 74,
-  "fields": {
-    "name": "Vietnam",
-    "flag": "https://flagcdn.com/w320/vn.png",
-    "created_at": "2026-04-23T17:38:26.152Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 75,
-  "fields": {
-    "name": "Turkey",
-    "flag": "https://flagcdn.com/w320/tr.png",
-    "created_at": "2026-04-23T17:38:26.159Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 76,
-  "fields": {
-    "name": "Iran",
-    "flag": "https://flagcdn.com/w320/ir.png",
-    "created_at": "2026-04-23T17:38:26.165Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 77,
-  "fields": {
-    "name": "Thailand",
-    "flag": "https://flagcdn.com/w320/th.png",
-    "created_at": "2026-04-23T17:38:26.172Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 78,
-  "fields": {
-    "name": "Myanmar",
-    "flag": "https://flagcdn.com/w320/mm.png",
-    "created_at": "2026-04-23T17:38:26.178Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 79,
-  "fields": {
-    "name": "South Korea",
-    "flag": "https://flagcdn.com/w320/kr.png",
-    "created_at": "2026-04-23T17:38:26.185Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 80,
-  "fields": {
-    "name": "Malaysia",
-    "flag": "https://flagcdn.com/w320/my.png",
-    "created_at": "2026-04-23T17:38:26.191Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 81,
-  "fields": {
-    "name": "Uzbekistan",
-    "flag": "https://flagcdn.com/w320/uz.png",
-    "created_at": "2026-04-23T17:38:26.198Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 82,
-  "fields": {
-    "name": "Afghanistan",
-    "flag": "https://flagcdn.com/w320/af.png",
-    "created_at": "2026-04-23T17:38:26.204Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 83,
-  "fields": {
-    "name": "Nepal",
-    "flag": "https://flagcdn.com/w320/np.png",
-    "created_at": "2026-04-23T17:38:26.210Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 84,
-  "fields": {
-    "name": "Sri Lanka",
-    "flag": "https://flagcdn.com/w320/lk.png",
-    "created_at": "2026-04-23T17:38:26.218Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 85,
-  "fields": {
-    "name": "Cambodia",
-    "flag": "https://flagcdn.com/w320/kh.png",
-    "created_at": "2026-04-23T17:38:26.224Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 86,
-  "fields": {
-    "name": "Laos",
-    "flag": "https://flagcdn.com/w320/la.png",
-    "created_at": "2026-04-23T17:38:26.231Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 87,
-  "fields": {
-    "name": "Singapore",
-    "flag": "https://flagcdn.com/w320/sg.png",
-    "created_at": "2026-04-23T17:38:26.237Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 88,
-  "fields": {
-    "name": "Brunei",
-    "flag": "https://flagcdn.com/w320/bn.png",
-    "created_at": "2026-04-23T17:38:26.243Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 89,
-  "fields": {
-    "name": "Maldives",
-    "flag": "https://flagcdn.com/w320/mv.png",
-    "created_at": "2026-04-23T17:38:26.250Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 90,
-  "fields": {
-    "name": "Bhutan",
-    "flag": "https://flagcdn.com/w320/bt.png",
-    "created_at": "2026-04-23T17:38:26.256Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 91,
-  "fields": {
-    "name": "Mongolia",
-    "flag": "https://flagcdn.com/w320/mn.png",
-    "created_at": "2026-04-23T17:38:26.263Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 92,
-  "fields": {
-    "name": "Kazakhstan",
-    "flag": "https://flagcdn.com/w320/kz.png",
-    "created_at": "2026-04-23T17:38:26.270Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 93,
-  "fields": {
-    "name": "Kyrgyzstan",
-    "flag": "https://flagcdn.com/w320/kg.png",
-    "created_at": "2026-04-23T17:38:26.276Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 94,
-  "fields": {
-    "name": "Tajikistan",
-    "flag": "https://flagcdn.com/w320/tj.png",
-    "created_at": "2026-04-23T17:38:26.282Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 95,
-  "fields": {
-    "name": "Turkmenistan",
-    "flag": "https://flagcdn.com/w320/tm.png",
-    "created_at": "2026-04-23T17:38:26.288Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 96,
-  "fields": {
-    "name": "Azerbaijan",
-    "flag": "https://flagcdn.com/w320/az.png",
-    "created_at": "2026-04-23T17:38:26.295Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 97,
-  "fields": {
-    "name": "Armenia",
-    "flag": "https://flagcdn.com/w320/am.png",
-    "created_at": "2026-04-23T17:38:26.302Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 98,
-  "fields": {
-    "name": "Georgia",
-    "flag": "https://flagcdn.com/w320/ge.png",
-    "created_at": "2026-04-23T17:38:26.307Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 99,
-  "fields": {
-    "name": "Israel",
-    "flag": "https://flagcdn.com/w320/il.png",
-    "created_at": "2026-04-23T17:38:26.314Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 100,
-  "fields": {
-    "name": "Cyprus",
-    "flag": "https://flagcdn.com/w320/cy.png",
-    "created_at": "2026-04-23T17:38:26.320Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 101,
-  "fields": {
-    "name": "North Korea",
-    "flag": "https://flagcdn.com/w320/kp.png",
-    "created_at": "2026-04-23T17:38:26.326Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 102,
-  "fields": {
-    "name": "Taiwan",
-    "flag": "https://flagcdn.com/w320/tw.png",
-    "created_at": "2026-04-23T17:38:26.333Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 103,
-  "fields": {
-    "name": "East Timor",
-    "flag": "https://flagcdn.com/w320/tl.png",
-    "created_at": "2026-04-23T17:38:26.339Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 104,
-  "fields": {
-    "name": "Russia",
-    "flag": "https://flagcdn.com/w320/ru.png",
-    "created_at": "2026-04-23T17:38:26.346Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 105,
-  "fields": {
-    "name": "Germany",
-    "flag": "https://flagcdn.com/w320/de.png",
-    "created_at": "2026-04-23T17:38:26.353Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 106,
-  "fields": {
-    "name": "United Kingdom",
-    "flag": "https://flagcdn.com/w320/gb.png",
-    "created_at": "2026-04-23T17:38:26.359Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 107,
-  "fields": {
-    "name": "France",
-    "flag": "https://flagcdn.com/w320/fr.png",
-    "created_at": "2026-04-23T17:38:26.365Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 108,
-  "fields": {
-    "name": "Italy",
-    "flag": "https://flagcdn.com/w320/it.png",
-    "created_at": "2026-04-23T17:38:26.371Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 109,
-  "fields": {
-    "name": "Spain",
-    "flag": "https://flagcdn.com/w320/es.png",
-    "created_at": "2026-04-23T17:38:26.378Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 110,
-  "fields": {
-    "name": "Ukraine",
-    "flag": "https://flagcdn.com/w320/ua.png",
-    "created_at": "2026-04-23T17:38:26.385Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 111,
-  "fields": {
-    "name": "Poland",
-    "flag": "https://flagcdn.com/w320/pl.png",
-    "created_at": "2026-04-23T17:38:26.391Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 112,
-  "fields": {
-    "name": "Romania",
-    "flag": "https://flagcdn.com/w320/ro.png",
-    "created_at": "2026-04-23T17:38:26.398Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 113,
-  "fields": {
-    "name": "Netherlands",
-    "flag": "https://flagcdn.com/w320/nl.png",
-    "created_at": "2026-04-23T17:38:26.404Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 114,
-  "fields": {
-    "name": "Belgium",
-    "flag": "https://flagcdn.com/w320/be.png",
-    "created_at": "2026-04-23T17:38:26.411Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 115,
-  "fields": {
-    "name": "Czech Republic",
-    "flag": "https://flagcdn.com/w320/cz.png",
-    "created_at": "2026-04-23T17:38:26.417Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 116,
-  "fields": {
-    "name": "Greece",
-    "flag": "https://flagcdn.com/w320/gr.png",
-    "created_at": "2026-04-23T17:38:26.424Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 117,
-  "fields": {
-    "name": "Portugal",
-    "flag": "https://flagcdn.com/w320/pt.png",
-    "created_at": "2026-04-23T17:38:26.432Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 118,
-  "fields": {
-    "name": "Sweden",
-    "flag": "https://flagcdn.com/w320/se.png",
-    "created_at": "2026-04-23T17:38:26.438Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 119,
-  "fields": {
-    "name": "Hungary",
-    "flag": "https://flagcdn.com/w320/hu.png",
-    "created_at": "2026-04-23T17:38:26.444Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 120,
-  "fields": {
-    "name": "Austria",
-    "flag": "https://flagcdn.com/w320/at.png",
-    "created_at": "2026-04-23T17:38:26.451Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 121,
-  "fields": {
-    "name": "Belarus",
-    "flag": "https://flagcdn.com/w320/by.png",
-    "created_at": "2026-04-23T17:38:26.457Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 122,
-  "fields": {
-    "name": "Switzerland",
-    "flag": "https://flagcdn.com/w320/ch.png",
-    "created_at": "2026-04-23T17:38:26.465Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 123,
-  "fields": {
-    "name": "Bulgaria",
-    "flag": "https://flagcdn.com/w320/bg.png",
-    "created_at": "2026-04-23T17:38:26.470Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 124,
-  "fields": {
-    "name": "Serbia",
-    "flag": "https://flagcdn.com/w320/rs.png",
-    "created_at": "2026-04-23T17:38:26.476Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 125,
-  "fields": {
-    "name": "Denmark",
-    "flag": "https://flagcdn.com/w320/dk.png",
-    "created_at": "2026-04-23T17:38:26.483Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 126,
-  "fields": {
-    "name": "Finland",
-    "flag": "https://flagcdn.com/w320/fi.png",
-    "created_at": "2026-04-23T17:38:26.490Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 127,
-  "fields": {
-    "name": "Slovakia",
-    "flag": "https://flagcdn.com/w320/sk.png",
-    "created_at": "2026-04-23T17:38:26.496Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 128,
-  "fields": {
-    "name": "Norway",
-    "flag": "https://flagcdn.com/w320/no.png",
-    "created_at": "2026-04-23T17:38:26.504Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 129,
-  "fields": {
-    "name": "Ireland",
-    "flag": "https://flagcdn.com/w320/ie.png",
-    "created_at": "2026-04-23T17:38:26.509Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 130,
-  "fields": {
-    "name": "Croatia",
-    "flag": "https://flagcdn.com/w320/hr.png",
-    "created_at": "2026-04-23T17:38:26.517Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 131,
-  "fields": {
-    "name": "Bosnia and Herzegovina",
-    "flag": "https://flagcdn.com/w320/ba.png",
-    "created_at": "2026-04-23T17:38:26.524Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 132,
-  "fields": {
-    "name": "Albania",
-    "flag": "https://flagcdn.com/w320/al.png",
-    "created_at": "2026-04-23T17:38:26.530Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 133,
-  "fields": {
-    "name": "Lithuania",
-    "flag": "https://flagcdn.com/w320/lt.png",
-    "created_at": "2026-04-23T17:38:26.537Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 134,
-  "fields": {
-    "name": "Slovenia",
-    "flag": "https://flagcdn.com/w320/si.png",
-    "created_at": "2026-04-23T17:38:26.544Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 135,
-  "fields": {
-    "name": "Latvia",
-    "flag": "https://flagcdn.com/w320/lv.png",
-    "created_at": "2026-04-23T17:38:26.551Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 136,
-  "fields": {
-    "name": "Estonia",
-    "flag": "https://flagcdn.com/w320/ee.png",
-    "created_at": "2026-04-23T17:38:26.557Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 137,
-  "fields": {
-    "name": "Moldova",
-    "flag": "https://flagcdn.com/w320/md.png",
-    "created_at": "2026-04-23T17:38:26.564Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 138,
-  "fields": {
-    "name": "Luxembourg",
-    "flag": "https://flagcdn.com/w320/lu.png",
-    "created_at": "2026-04-23T17:38:26.570Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 139,
-  "fields": {
-    "name": "Malta",
-    "flag": "https://flagcdn.com/w320/mt.png",
-    "created_at": "2026-04-23T17:38:26.576Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 140,
-  "fields": {
-    "name": "Iceland",
-    "flag": "https://flagcdn.com/w320/is.png",
-    "created_at": "2026-04-23T17:38:26.584Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 141,
-  "fields": {
-    "name": "Montenegro",
-    "flag": "https://flagcdn.com/w320/me.png",
-    "created_at": "2026-04-23T17:38:26.590Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 142,
-  "fields": {
-    "name": "North Macedonia",
-    "flag": "https://flagcdn.com/w320/mk.png",
-    "created_at": "2026-04-23T17:38:26.598Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 143,
-  "fields": {
-    "name": "Andorra",
-    "flag": "https://flagcdn.com/w320/ad.png",
-    "created_at": "2026-04-23T17:38:26.604Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 144,
-  "fields": {
-    "name": "Monaco",
-    "flag": "https://flagcdn.com/w320/mc.png",
-    "created_at": "2026-04-23T17:38:26.610Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 145,
-  "fields": {
-    "name": "Liechtenstein",
-    "flag": "https://flagcdn.com/w320/li.png",
-    "created_at": "2026-04-23T17:38:26.618Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 146,
-  "fields": {
-    "name": "San Marino",
-    "flag": "https://flagcdn.com/w320/sm.png",
-    "created_at": "2026-04-23T17:38:26.624Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 147,
-  "fields": {
-    "name": "Vatican City",
-    "flag": "https://flagcdn.com/w320/va.png",
-    "created_at": "2026-04-23T17:38:26.630Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 148,
-  "fields": {
-    "name": "United States",
-    "flag": "https://flagcdn.com/w320/us.png",
-    "created_at": "2026-04-23T17:38:26.637Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 149,
-  "fields": {
-    "name": "Canada",
-    "flag": "https://flagcdn.com/w320/ca.png",
-    "created_at": "2026-04-23T17:38:26.644Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 150,
-  "fields": {
-    "name": "Mexico",
-    "flag": "https://flagcdn.com/w320/mx.png",
-    "created_at": "2026-04-23T17:38:26.650Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 151,
-  "fields": {
-    "name": "Guatemala",
-    "flag": "https://flagcdn.com/w320/gt.png",
-    "created_at": "2026-04-23T17:38:26.656Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 152,
-  "fields": {
-    "name": "Cuba",
-    "flag": "https://flagcdn.com/w320/cu.png",
-    "created_at": "2026-04-23T17:38:26.663Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 153,
-  "fields": {
-    "name": "Haiti",
-    "flag": "https://flagcdn.com/w320/ht.png",
-    "created_at": "2026-04-23T17:38:26.669Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 154,
-  "fields": {
-    "name": "Dominican Republic",
-    "flag": "https://flagcdn.com/w320/do.png",
-    "created_at": "2026-04-23T17:38:26.675Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 155,
-  "fields": {
-    "name": "Honduras",
-    "flag": "https://flagcdn.com/w320/hn.png",
-    "created_at": "2026-04-23T17:38:26.681Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 156,
-  "fields": {
-    "name": "Nicaragua",
-    "flag": "https://flagcdn.com/w320/ni.png",
-    "created_at": "2026-04-23T17:38:26.688Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 157,
-  "fields": {
-    "name": "Costa Rica",
-    "flag": "https://flagcdn.com/w320/cr.png",
-    "created_at": "2026-04-23T17:38:26.696Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 158,
-  "fields": {
-    "name": "Panama",
-    "flag": "https://flagcdn.com/w320/pa.png",
-    "created_at": "2026-04-23T17:38:26.703Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 159,
-  "fields": {
-    "name": "El Salvador",
-    "flag": "https://flagcdn.com/w320/sv.png",
-    "created_at": "2026-04-23T17:38:26.710Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 160,
-  "fields": {
-    "name": "Belize",
-    "flag": "https://flagcdn.com/w320/bz.png",
-    "created_at": "2026-04-23T17:38:26.718Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 161,
-  "fields": {
-    "name": "Jamaica",
-    "flag": "https://flagcdn.com/w320/jm.png",
-    "created_at": "2026-04-23T17:38:26.724Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 162,
-  "fields": {
-    "name": "Trinidad and Tobago",
-    "flag": "https://flagcdn.com/w320/tt.png",
-    "created_at": "2026-04-23T17:38:26.731Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 163,
-  "fields": {
-    "name": "Bahamas",
-    "flag": "https://flagcdn.com/w320/bs.png",
-    "created_at": "2026-04-23T17:38:26.737Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 164,
-  "fields": {
-    "name": "Barbados",
-    "flag": "https://flagcdn.com/w320/bb.png",
-    "created_at": "2026-04-23T17:38:26.744Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 165,
-  "fields": {
-    "name": "Saint Lucia",
-    "flag": "https://flagcdn.com/w320/lc.png",
-    "created_at": "2026-04-23T17:38:26.751Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 166,
-  "fields": {
-    "name": "Grenada",
-    "flag": "https://flagcdn.com/w320/gd.png",
-    "created_at": "2026-04-23T17:38:26.757Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 167,
-  "fields": {
-    "name": "Saint Vincent and the Grenadines",
-    "flag": "https://flagcdn.com/w320/vc.png",
-    "created_at": "2026-04-23T17:38:26.764Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 168,
-  "fields": {
-    "name": "Antigua and Barbuda",
-    "flag": "https://flagcdn.com/w320/ag.png",
-    "created_at": "2026-04-23T17:38:26.770Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 169,
-  "fields": {
-    "name": "Dominica",
-    "flag": "https://flagcdn.com/w320/dm.png",
-    "created_at": "2026-04-23T17:38:26.813Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 170,
-  "fields": {
-    "name": "Saint Kitts and Nevis",
-    "flag": "https://flagcdn.com/w320/kn.png",
-    "created_at": "2026-04-23T17:38:26.819Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 171,
-  "fields": {
-    "name": "Brazil",
-    "flag": "https://flagcdn.com/w320/br.png",
-    "created_at": "2026-04-23T17:38:26.833Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 172,
-  "fields": {
-    "name": "Colombia",
-    "flag": "https://flagcdn.com/w320/co.png",
-    "created_at": "2026-04-23T17:38:26.839Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 173,
-  "fields": {
-    "name": "Argentina",
-    "flag": "https://flagcdn.com/w320/ar.png",
-    "created_at": "2026-04-23T17:38:26.845Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 174,
-  "fields": {
-    "name": "Peru",
-    "flag": "https://flagcdn.com/w320/pe.png",
-    "created_at": "2026-04-23T17:38:26.852Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 175,
-  "fields": {
-    "name": "Venezuela",
-    "flag": "https://flagcdn.com/w320/ve.png",
-    "created_at": "2026-04-23T17:38:26.857Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 176,
-  "fields": {
-    "name": "Chile",
-    "flag": "https://flagcdn.com/w320/cl.png",
-    "created_at": "2026-04-23T17:38:26.864Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 177,
-  "fields": {
-    "name": "Ecuador",
-    "flag": "https://flagcdn.com/w320/ec.png",
-    "created_at": "2026-04-23T17:38:26.870Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 178,
-  "fields": {
-    "name": "Bolivia",
-    "flag": "https://flagcdn.com/w320/bo.png",
-    "created_at": "2026-04-23T17:38:26.877Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 179,
-  "fields": {
-    "name": "Paraguay",
-    "flag": "https://flagcdn.com/w320/py.png",
-    "created_at": "2026-04-23T17:38:26.882Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 180,
-  "fields": {
-    "name": "Uruguay",
-    "flag": "https://flagcdn.com/w320/uy.png",
-    "created_at": "2026-04-23T17:38:26.888Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 181,
-  "fields": {
-    "name": "Guyana",
-    "flag": "https://flagcdn.com/w320/gy.png",
-    "created_at": "2026-04-23T17:38:26.895Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 182,
-  "fields": {
-    "name": "Suriname",
-    "flag": "https://flagcdn.com/w320/sr.png",
-    "created_at": "2026-04-23T17:38:26.901Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 183,
-  "fields": {
-    "name": "Australia",
-    "flag": "https://flagcdn.com/w320/au.png",
-    "created_at": "2026-04-23T17:38:26.908Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 184,
-  "fields": {
-    "name": "Papua New Guinea",
-    "flag": "https://flagcdn.com/w320/pg.png",
-    "created_at": "2026-04-23T17:38:26.915Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 185,
-  "fields": {
-    "name": "New Zealand",
-    "flag": "https://flagcdn.com/w320/nz.png",
-    "created_at": "2026-04-23T17:38:26.921Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 186,
-  "fields": {
-    "name": "Fiji",
-    "flag": "https://flagcdn.com/w320/fj.png",
-    "created_at": "2026-04-23T17:38:26.927Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 187,
-  "fields": {
-    "name": "Solomon Islands",
-    "flag": "https://flagcdn.com/w320/sb.png",
-    "created_at": "2026-04-23T17:38:26.933Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 188,
-  "fields": {
-    "name": "Vanuatu",
-    "flag": "https://flagcdn.com/w320/vu.png",
-    "created_at": "2026-04-23T17:38:26.938Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 189,
-  "fields": {
-    "name": "Samoa",
-    "flag": "https://flagcdn.com/w320/ws.png",
-    "created_at": "2026-04-23T17:38:26.946Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 190,
-  "fields": {
-    "name": "Micronesia",
-    "flag": "https://flagcdn.com/w320/fm.png",
-    "created_at": "2026-04-23T17:38:26.952Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 191,
-  "fields": {
-    "name": "Tonga",
-    "flag": "https://flagcdn.com/w320/to.png",
-    "created_at": "2026-04-23T17:38:26.958Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 192,
-  "fields": {
-    "name": "Kiribati",
-    "flag": "https://flagcdn.com/w320/ki.png",
-    "created_at": "2026-04-23T17:38:26.965Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 193,
-  "fields": {
-    "name": "Palau",
-    "flag": "https://flagcdn.com/w320/pw.png",
-    "created_at": "2026-04-23T17:38:26.971Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 194,
-  "fields": {
-    "name": "Marshall Islands",
-    "flag": "https://flagcdn.com/w320/mh.png",
-    "created_at": "2026-04-23T17:38:26.976Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 195,
-  "fields": {
-    "name": "Tuvalu",
-    "flag": "https://flagcdn.com/w320/tv.png",
-    "created_at": "2026-04-23T17:38:26.983Z"
-  }
-},
-{
-  "model": "plants.country",
-  "pk": 196,
-  "fields": {
-    "name": "Nauru",
-    "flag": "https://flagcdn.com/w320/nr.png",
-    "created_at": "2026-04-23T17:38:26.989Z"
-  }
-},
-{
-  "model": "plants.category",
-  "pk": 1,
-  "fields": {
-    "name": "Indoor Plants",
-    "created_at": "2026-04-22T20:42:40.676Z"
-  }
-},
-{
-  "model": "plants.category",
-  "pk": 2,
-  "fields": {
-    "name": "Outdoor Plants",
-    "created_at": "2026-04-22T20:42:40.685Z"
-  }
-},
-{
-  "model": "plants.category",
-  "pk": 3,
-  "fields": {
-    "name": "Herbs",
-    "created_at": "2026-04-22T20:42:40.692Z"
-  }
-},
-{
-  "model": "plants.category",
-  "pk": 4,
-  "fields": {
-    "name": "Fruits",
-    "created_at": "2026-04-22T20:42:40.699Z"
-  }
-},
-{
-  "model": "plants.category",
-  "pk": 5,
-  "fields": {
-    "name": "Vegetables",
-    "created_at": "2026-04-22T20:42:40.707Z"
-  }
-},
-{
-  "model": "plants.category",
-  "pk": 6,
-  "fields": {
-    "name": "Medicinal Plants",
-    "created_at": "2026-04-22T20:42:40.717Z"
-  }
-},
-{
-  "model": "plants.category",
-  "pk": 7,
-  "fields": {
-    "name": "Flowering Plants",
-    "created_at": "2026-04-22T20:42:40.724Z"
-  }
-},
-{
-  "model": "plants.category",
-  "pk": 8,
-  "fields": {
-    "name": "Succulents",
-    "created_at": "2026-04-22T20:42:40.732Z"
-  }
-},
-{
-  "model": "plants.plant",
-  "pk": 1,
-  "fields": {
-    "name": "Monstera Deliciosa",
-    "scientific_name": "Monstera deliciosa",
-    "description": "A popular indoor plant known for its large, split leaves. Easy to care for and grows quickly in bright, indirect light.",
-    "image_url": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500",
-    "category": 1,
-    "is_edible": false,
-    "sunlight": "Bright, indirect light",
-    "water_needs": "Water when top soil is dry",
-    "views_count": 2,
-    "created_at": "2026-04-22T20:42:40.744Z",
-    "countries": []
-  }
-},
-{
-  "model": "plants.plant",
-  "pk": 2,
-  "fields": {
-    "name": "Snake Plant",
-    "scientific_name": "Sansevieria trifasciata",
-    "description": "An extremely hardy indoor plant that can tolerate low light and infrequent watering. Perfect for beginners.",
-    "image_url": "https://images.unsplash.com/photo-1593691509543-c55fb32d8de5?w=500",
-    "category": 1,
-    "is_edible": false,
-    "sunlight": "Low to bright light",
-    "water_needs": "Water every 2-3 weeks",
-    "views_count": 0,
-    "created_at": "2026-04-22T20:42:40.752Z",
-    "countries": []
-  }
-},
-{
-  "model": "plants.plant",
-  "pk": 3,
-  "fields": {
-    "name": "Basil",
-    "scientific_name": "Ocimum basilicum",
-    "description": "A fragrant herb commonly used in cooking. Easy to grow and perfect for kitchen gardens.",
-    "image_url": "https://images.unsplash.com/photo-1618164436241-4473940d1f5c?w=500",
-    "category": 3,
-    "is_edible": true,
-    "sunlight": "Full sun",
-    "water_needs": "Keep soil consistently moist",
-    "views_count": 3,
-    "created_at": "2026-04-22T20:42:40.760Z",
-    "countries": []
-  }
-},
-{
-  "model": "plants.plant",
-  "pk": 4,
-  "fields": {
-    "name": "Aloe Vera",
-    "scientific_name": "Aloe barbadensis miller",
-    "description": "A succulent plant with medicinal properties. The gel inside the leaves can be used for skin care.",
-    "image_url": "https://images.unsplash.com/photo-1509587584298-0f3b3a3a1797?w=500",
-    "category": 8,
-    "is_edible": false,
-    "sunlight": "Bright, indirect light",
-    "water_needs": "Water deeply but infrequently",
-    "views_count": 21,
-    "created_at": "2026-04-22T20:42:40.793Z",
-    "countries": [
-      167,
-      189,
-      1
-    ]
-  }
-},
-{
-  "model": "plants.plant",
-  "pk": 5,
-  "fields": {
-    "name": "Rose Bush",
-    "scientific_name": "Rosa rubiginosa",
-    "description": "Classic flowering plant perfect for outdoor gardens. Produces beautiful, fragrant flowers.",
-    "image_url": "https://images.unsplash.com/photo-1611859328053-3cbc9f9399f4?q=80&w=1026&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "category": 2,
-    "is_edible": false,
-    "sunlight": "Full sun",
-    "water_needs": "Regular watering, avoid wetting leaves",
-    "views_count": 3,
-    "created_at": "2026-04-22T20:42:40.819Z",
-    "countries": []
-  }
-},
-{
-  "model": "plants.plantimage",
-  "pk": 1,
-  "fields": {
-    "plant": 4,
-    "image_url": "https://images.unsplash.com/photo-1611859328053-3cbc9f9399f4?q=80&w=1026&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "caption": "",
-    "is_primary": false,
-    "created_at": "2026-04-22T20:58:13.608Z"
-  }
-},
-{
-  "model": "plants.comment",
-  "pk": 1,
-  "fields": {
-    "plant": 4,
-    "user": [
-      "jihad7x"
-    ],
-    "name": "jihad7x",
-    "content": "testtttt",
-    "created_at": "2026-04-22T21:03:15.244Z"
-  }
-},
-{
-  "model": "plants.rating",
-  "pk": 1,
-  "fields": {
-    "plant": 4,
-    "user": [
-      "jihad7x"
-    ],
-    "name": "jihad7x",
-    "score": 5,
-    "created_at": "2026-04-22T21:03:22.189Z"
-  }
-},
-{
-  "model": "plants.rating",
-  "pk": 2,
-  "fields": {
-    "plant": 3,
-    "user": [
-      "jihad7x"
-    ],
-    "name": "jihad7x",
-    "score": 4,
-    "created_at": "2026-04-22T21:44:28.047Z"
-  }
-},
-{
-  "model": "plants.favorite",
-  "pk": 3,
-  "fields": {
-    "user": [
-      "jihad7x"
-    ],
-    "plant": 2,
-    "created_at": "2026-04-22T21:02:47.946Z"
-  }
-},
-{
-  "model": "plants.favorite",
-  "pk": 4,
-  "fields": {
-    "user": [
-      "jihad7x"
-    ],
-    "plant": 4,
-    "created_at": "2026-04-22T21:44:11.502Z"
-  }
-},
-{
-  "model": "plants.favorite",
-  "pk": 5,
-  "fields": {
-    "user": [
-      "jihad7x"
-    ],
-    "plant": 3,
-    "created_at": "2026-04-22T21:44:12.797Z"
-  }
-}
 ]
