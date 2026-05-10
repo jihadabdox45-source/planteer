@@ -1,8 +1,9 @@
 {% extends 'core/base.html' %}
 {% load static %}
 {% block title %}Delete Plant - Planteer{% endblock %}
+{% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/stayle.css' %}">
-{% block extra_css %}{% endblock %}
+{% endblock %}
 {% block content %}
 
 <div class="row justify-content-center">
@@ -41,7 +42,7 @@
                         class="btn btn-danger btn-lg" 
                         style="border-radius: 1rem; font-weight: 600; padding: 1rem;"
                     >
-                        🗑️ Yes, Delete Permanently
+                         Yes, Delete Permanently
                     </button>
                     <a 
                         href="{% url 'plants:detail' plant.id %}" 

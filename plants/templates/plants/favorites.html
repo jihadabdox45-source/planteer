@@ -1,15 +1,13 @@
 {% extends 'core/base.html' %}
 {% load static %}
 {% block title %}My Favorites - Planteer{% endblock %}
-<link rel="stylesheet" href="{% static 'css/style.css' %}">
-{% block extra_css %}{% endblock %}
-{% block content %}
 
+{% block content %}
 <!-- Page Header -->
 <div class="d-flex justify-content-between align-items-center mb-5">
     <div>
         <h1 class="fw-bold mb-2" style="font-size: 3rem; color: var(--gray-900);">
-             My Favorites
+            <i class="bi bi-heart-fill me-3" style="color: #dc2626;"></i>My Favorites
         </h1>
         <p class="text-muted mb-0" style="font-size: 1.1rem;">
             Your personal collection of favorite plants
@@ -20,37 +18,103 @@
 <!-- Favorites Count -->
 <div class="mb-4 p-3 rounded-3" style="background: rgba(239, 68, 68, 0.05);">
     <span class="fw-semibold" style="color: var(--gray-700);">
-        
-        You have <span id="total-favorites" class="fw-bold" style="color: #dc2626; font-size: 1.2rem;">0</span> favorite plant<span id="plural-s">s</span>
+        You have <span class="fw-bold" style="color: #dc2626; font-size: 1.2rem;">{{ plants|length }}</span> favorite plant{{ plants|length|pluralize }}
     </span>
 </div>
 
 <!-- Favorites Grid -->
-<div id="favorites-container" class="row g-4">
-    <!-- Favorites will be loaded here by JavaScript -->
-</div>
+{% if plants %}
+    <div class="row g-4">
+        {% for plant in plants %}
+            <div class="col-xl-3 col-lg-4 col-md-6">
+                <div class="card border-0 shadow-sm h-100" style="border-radius: 1rem; overflow: hidden; transition: all 0.3s ease;">
+                    <div class="position-relative" style="height: 200px; overflow: hidden;">
+                        <img src="{{ plant.get_primary_image }}" class="w-100 h-100" alt="{{ plant.name }}" style="object-fit: cover;">
+                        
+                        <!-- Favorite Button -->
+                        <div class="position-absolute top-0 end-0 m-2">
+                            <button class="btn btn-sm add-to-favorites" 
+                                    data-plant-id="{{ plant.id }}"
+                                    data-plant-name="{{ plant.name }}"
+                                    data-plant-scientific="{{ plant.scientific_name }}"
+                                    data-plant-image="{{ plant.get_primary_image }}"
+                                    type="button"
+                                    style="border-radius: 50%; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; background: #dc3545; border: 2px solid #dc3545; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"
+                                    title="Remove from favorites">
+                                <i class="bi bi-heart-fill" style="font-size: 1rem; color: white;"></i>
+                            </button>
+                        </div>
 
-<!-- Empty State -->
-<div id="empty-favorites" class="text-center p-5 rounded-4" style="background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(254, 242, 242, 0.9)); border: 2px dashed #dc2626; display: none;">
-    <h3 class="fw-bold mb-3" style="color: var(--gray-800);">No Favorites Yet</h3>
-    <p class="text-muted mb-4" style="font-size: 1.1rem;">
-        Start adding plants to your favorites by clicking the heart icon on any plant!
-    </p>
-    <div class="d-flex gap-3 justify-content-center flex-wrap">
-        <a href="{% url 'plants:all_plants' %}" class="btn btn-main">
-            Browse Plants
-        </a>
-        <a href="{% url 'core:home' %}" class="btn btn-outline-main">
-            Go Home
-        </a>
+                        <!-- Edible Badge -->
+                        <div class="position-absolute bottom-0 start-0 m-2">
+                            <span class="badge text-bg-{{ plant.is_edible|yesno:'success,secondary' }}" style="font-size: 0.75rem;">
+                                <i class="bi bi-{{ plant.is_edible|yesno:'check-circle-fill,x-circle-fill' }} me-1"></i>
+                                {{ plant.is_edible|yesno:'Edible,Not Edible' }}
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Card Body -->
+                    <div class="card-body bg-white p-3 d-flex flex-column">
+                        <!-- Category -->
+                        <span class="badge text-bg-light text-dark mb-2 align-self-start" style="font-size: 0.7rem;">
+                            {{ plant.get_category_display }}
+                        </span>
+
+                        <!-- Plant Name -->
+                        <h5 class="fw-bold mb-2" style="color: var(--gray-900); line-height: 1.3;">{{ plant.name }}</h5>
+                        
+                        <!-- Scientific Name -->
+                        <p class="text-muted mb-3 small" style="font-style: italic;">{{ plant.scientific_name }}</p>
+
+                        <!-- Statistics -->
+                        <div class="row g-2 mb-3 text-center">
+                            <div class="col-4">
+                                <div class="p-2 rounded" style="background: rgba(16, 185, 129, 0.1);">
+                                    <i class="bi bi-eye-fill d-block mb-1" style="color: #10b981; font-size: 0.9rem;"></i>
+                                    <small class="fw-semibold" style="color: #10b981;">{{ plant.views_count }}</small>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="p-2 rounded" style="background: rgba(59, 130, 246, 0.1);">
+                                    <i class="bi bi-chat-dots-fill d-block mb-1" style="color: #3b82f6; font-size: 0.9rem;"></i>
+                                    <small class="fw-semibold" style="color: #3b82f6;">{{ plant.comments.count }}</small>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="p-2 rounded" style="background: rgba(245, 158, 11, 0.1);">
+                                    <i class="bi bi-star-fill d-block mb-1" style="color: #f59e0b; font-size: 0.9rem;"></i>
+                                    <small class="fw-semibold" style="color: #f59e0b;">{{ plant.average_rating|floatformat:1 }}</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Action Button -->
+                        <div class="mt-auto">
+                            <a href="{% url 'plants:detail' plant.id %}" class="btn btn-outline-success w-100" style="border-radius: 0.5rem; font-weight: 600;">
+                                <i class="bi bi-eye me-1"></i> View Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
     </div>
-</div>
-
-
-{% block extra_js %}
-<script src="{% static 'js/script.js' %}"></script>
-{% endblock %}
-
-
+{% else %}
+    <!-- Empty State -->
+    <div class="text-center p-5 rounded-4" style="background: rgba(243, 244, 246, 0.5); border: 2px dashed rgba(220, 38, 38, 0.25);">
+        <i class="bi bi-heart" style="font-size: 4rem; color: #dc2626; opacity: 0.3;"></i>
+        <h3 class="fw-bold mb-3 mt-3">No Favorites Yet</h3>
+        <p class="text-muted mb-4">Start adding plants to your favorites to see them here.</p>
+        <div class="d-flex gap-3 justify-content-center flex-wrap">
+            <a href="{% url 'plants:all_plants' %}" class="btn btn-success">
+                <i class="bi bi-grid me-1"></i> Browse Plants
+            </a>
+            <a href="{% url 'core:home' %}" class="btn btn-outline-success">
+                <i class="bi bi-house me-1"></i> Go Home
+            </a>
+        </div>
+    </div>
+{% endif %}
 
 {% endblock %}

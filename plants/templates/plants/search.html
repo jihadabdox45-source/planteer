@@ -58,7 +58,7 @@
     <div class="col-sm-6 col-lg-4 col-xl-3">
         <div class="plant-card">
             <div style="overflow: hidden; position: relative;">
-                <img src="{{ plant.image_url }}" class="card-img-top" alt="{{ plant.name }}">
+                <img src="{{ plant.get_primary_image }}" class="card-img-top" alt="{{ plant.name }}">
                 <div class="position-absolute top-0 end-0 m-3">
                     {% if plant.is_edible %}
                     <span class="badge text-bg-success"> Edible</span>

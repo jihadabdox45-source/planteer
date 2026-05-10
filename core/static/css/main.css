@@ -455,3 +455,49 @@ main {
         display: none;
     }
 }
+
+
+/* Plant Detail Page Styles */
+.info-card {
+    background: linear-gradient(135deg, var(--white) 0%, var(--bg-secondary) 100%);
+    border: 2px solid rgba(16, 185, 129, 0.15);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    transition: var(--transition);
+    height: 100%;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--primary);
+}
+
+.add-to-favorites {
+    background: rgba(255, 255, 255, 0.95);
+    border: 2px solid #e5e7eb;
+    color: #6b7280;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    font-weight: 600;
+    padding: 0.75rem 1.75rem;
+    border-radius: var(--radius-lg);
+}
+
+.add-to-favorites:hover {
+    border-color: #dc2626;
+    color: #dc2626;
+    background: rgba(254, 242, 242, 0.95);
+    transform: translateY(-2px);
+}
+
+.add-to-favorites.active {
+    background: #dc2626;
+    color: white;
+    border-color: #dc2626;
+}
+
+.add-to-favorites.active:hover {
+    background: #b91c1c;
+    border-color: #b91c1c;
+}

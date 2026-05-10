@@ -1,5 +1,5 @@
 from django import forms
-from .models import Plant, Comment, Rating
+from .models import Plant, Comment, Rating, Category, PlantImage, Country
 
 
 class PlantForm(forms.ModelForm):
@@ -12,6 +12,7 @@ class PlantForm(forms.ModelForm):
             'description',
             'image_url',
             'category',
+            'countries',
             'is_edible',
             'sunlight',
             'water_needs',
@@ -41,10 +42,13 @@ class PlantForm(forms.ModelForm):
             'image_url': forms.URLInput(attrs={
                 'class': 'form-control',
                 'placeholder': 'https://example.com/image.jpg',
-                'required': True,
             }),
             'category': forms.Select(attrs={
                 'class': 'form-select',
+            }),
+            'countries': forms.SelectMultiple(attrs={
+                'class': 'form-select',
+                'size': '5',
             }),
             'is_edible': forms.CheckboxInput(attrs={
                 'class': 'form-check-input',
@@ -66,12 +70,19 @@ class PlantForm(forms.ModelForm):
             'name': 'Plant Name',
             'scientific_name': 'Scientific Name',
             'description': 'Description',
-            'image_url': 'Image URL',
+            'image_url': 'Primary Image URL',
             'category': 'Category',
+            'countries': 'Native Countries',
             'is_edible': 'Is this plant edible?',
             'sunlight': 'Sunlight Requirements',
             'water_needs': 'Water Requirements',
         }
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['category'].queryset = Category.objects.all()
+        self.fields['category'].empty_label = "Select a category"
+        self.fields['countries'].queryset = Country.objects.all()
 
     def clean_name(self):
         name = self.cleaned_data.get('name', '').strip()
@@ -92,19 +103,48 @@ class PlantForm(forms.ModelForm):
         return description
 
 
+class PlantImageForm(forms.ModelForm):
+    class Meta:
+        model = PlantImage
+        fields = ['image_url', 'caption', 'is_primary']
+        widgets = {
+            'image_url': forms.URLInput(attrs={
+                'class': 'form-control',
+                'placeholder': 'https://example.com/image.jpg',
+                'required': True,
+            }),
+            'caption': forms.TextInput(attrs={
+                'class': 'form-control',
+                'placeholder': 'Optional caption for this image',
+                'maxlength': 200,
+            }),
+            'is_primary': forms.CheckboxInput(attrs={
+                'class': 'form-check-input',
+            }),
+        }
+        labels = {
+            'image_url': 'Image URL',
+            'caption': 'Caption (Optional)',
+            'is_primary': 'Set as primary image',
+        }
+
+
+PlantImageFormSet = forms.inlineformset_factory(
+    Plant, 
+    PlantImage, 
+    form=PlantImageForm,
+    extra=3,
+    can_delete=True,
+    max_num=10,
+)
+
+
 class CommentForm(forms.ModelForm):
     
     class Meta:
         model = Comment
-        fields = ['name', 'content']
+        fields = ['content']
         widgets = {
-            'name': forms.TextInput(attrs={
-                'class': 'form-control',
-                'placeholder': 'Enter your name',
-                'required': True,
-                'minlength': 2,
-                'maxlength': 100,
-            }),
             'content': forms.Textarea(attrs={
                 'class': 'form-control',
                 'rows': 4,
@@ -114,15 +154,12 @@ class CommentForm(forms.ModelForm):
             }),
         }
         labels = {
-            'name': 'Your Name',
             'content': 'Your Comment',
         }
 
-    def clean_name(self):
-        name = self.cleaned_data.get('name', '').strip()
-        if len(name) < 2:
-            raise forms.ValidationError('Name must be at least 2 characters long.')
-        return name
+    def __init__(self, *args, **kwargs):
+        user = kwargs.pop('user', None)
+        super().__init__(*args, **kwargs)
 
     def clean_content(self):
         content = self.cleaned_data.get('content', '').strip()
@@ -135,15 +172,8 @@ class RatingForm(forms.ModelForm):
     
     class Meta:
         model = Rating
-        fields = ['name', 'score']
+        fields = ['score']
         widgets = {
-            'name': forms.TextInput(attrs={
-                'class': 'form-control',
-                'placeholder': 'Enter your name',
-                'required': True,
-                'minlength': 2,
-                'maxlength': 100,
-            }),
             'score': forms.Select(
                 choices=[(i, f'{i} Star{"s" if i > 1 else ""}') for i in range(1, 6)],
                 attrs={
@@ -153,12 +183,9 @@ class RatingForm(forms.ModelForm):
             ),
         }
         labels = {
-            'name': 'Your Name',
             'score': 'Rating',
         }
 
-    def clean_name(self):
-        name = self.cleaned_data.get('name', '').strip()
-        if len(name) < 2:
-            raise forms.ValidationError('Name must be at least 2 characters long.')
-        return name
+    def __init__(self, *args, **kwargs):
+        user = kwargs.pop('user', None)
+        super().__init__(*args, **kwargs)

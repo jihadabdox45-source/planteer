@@ -1,100 +1,119 @@
-// Get favorites from localStorage
-function getFavorites() {
-    return JSON.parse(localStorage.getItem('favorites')) || [];
-}
-
-// Save favorites
-function saveFavorites(favorites) {
-    localStorage.setItem('favorites', JSON.stringify(favorites));
-}
-
-// Update favorites count in navbar
-function updateFavoritesCount() {
-    const countElement = document.getElementById('favorites-count');
-    if (!countElement) return;
-
-    const favorites = getFavorites();
-
-    if (favorites.length > 0) {
-        countElement.style.display = 'inline-flex';
-        countElement.textContent = favorites.length;
-    } else {
-        countElement.style.display = 'none';
-    }
-}
-
-// Toggle favorite
-function toggleFavorite(id, plantData) {
-    let favorites = getFavorites();
-    const index = favorites.findIndex(p => p.id === id);
-
-    if (index > -1) {
-        favorites.splice(index, 1);
-    } else {
-        favorites.push(plantData);
-    }
-
-    saveFavorites(favorites);
-    updateFavoritesCount();
-    updateButtons();
-}
-
-// Change button UI
-function updateButtons() {
-    const favorites = getFavorites();
-
-    document.querySelectorAll('.add-to-favorites').forEach(btn => {
-        const id = parseInt(btn.getAttribute('data-plant-id'));
-
-        if (favorites.some(p => p.id === id)) {
-            btn.classList.add('active');
+// Toggle favorite with database support
+function toggleFavorite(button) {
+    const plantId = button.getAttribute('data-plant-id');
+    
+    // Send request to server
+    fetch(`/plants/${plantId}/toggle-favorite/`, {
+        method: 'POST',
+        headers: {
+            'X-CSRFToken': getCookie('csrftoken'),
+            'Content-Type': 'application/json',
+        },
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            updateButtonState(button, data.is_favorite);
+            showNotification(data.message);
+        } else if (data.error === 'authentication_required') {
+            // Redirect to login if not authenticated
+            window.location.href = data.redirect_url;
         } else {
-            btn.classList.remove('active');
+            showNotification('Error updating favorites', 'error');
         }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        showNotification('Error updating favorites', 'error');
     });
 }
 
-// Load favorites page
-function loadFavoritesPage() {
-    const container = document.getElementById('favorites-container');
-    if (!container) return;
-
-    const favorites = getFavorites();
-
-    if (favorites.length === 0) {
-        container.innerHTML = `
-            <div class="text-center p-5">
-                <h3>No favorites yet</h3>
-                <p>Add plants to your favorites to see them here.</p>
-            </div>
-        `;
-        return;
+// Update button state
+function updateButtonState(button, isFavorite) {
+    // Check if this is a text button (has px-3 class) or icon-only button
+    const isTextButton = button.classList.contains('px-3');
+    
+    if (isTextButton) {
+        // Text button (in plant detail page)
+        if (isFavorite) {
+            button.style.background = '#dc3545';
+            button.style.color = 'white';
+            button.innerHTML = '<i class="bi bi-heart-fill me-1"></i> Remove from Favorites';
+        } else {
+            button.style.background = '#6c757d';
+            button.style.color = 'white';
+            button.innerHTML = '<i class="bi bi-heart-fill me-1"></i> Add to Favorites';
+        }
+    } else {
+        // Icon-only button (in cards)
+        if (isFavorite) {
+            button.style.background = 'rgba(220, 53, 69, 0.95)';
+            button.style.borderColor = '#dc3545';
+            button.innerHTML = '<i class="bi bi-heart-fill" style="font-size: 1rem; color: white;"></i>';
+            button.title = 'Remove from favorites';
+        } else {
+            button.style.background = 'rgba(255, 255, 255, 0.95)';
+            button.style.borderColor = '#e5e7eb';
+            button.innerHTML = '<i class="bi bi-heart-fill" style="font-size: 1rem; color: #6b7280;"></i>';
+            button.title = 'Add to favorites';
+        }
     }
-
-    container.innerHTML = '';
-
-    favorites.forEach(plant => {
-        container.innerHTML += `
-            <div class="col-md-4">
-                <div class="plant-card">
-                    <img src="${plant.image_url}" class="card-img-top">
-                    <div class="card-body">
-                        <h5>${plant.name}</h5>
-                        <p class="text-muted">${plant.scientific_name}</p>
-                        <a href="/plants/${plant.id}/detail/" class="btn btn-outline-main w-100">
-                            View Details
-                        </a>
-                    </div>
-                </div>
-            </div>
-        `;
-    });
 }
 
+// Get CSRF token
+function getCookie(name) {
+    let cookieValue = null;
+    if (document.cookie && document.cookie !== '') {
+        const cookies = document.cookie.split(';');
+        for (let i = 0; i < cookies.length; i++) {
+            const cookie = cookies[i].trim();
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+}
 
-// Run on load
+// Show notification
+function showNotification(message, type = 'success') {
+    // Remove existing notification
+    const existing = document.querySelector('.favorite-notification');
+    if (existing) existing.remove();
+
+    // Create notification element
+    const notification = document.createElement('div');
+    notification.className = `alert alert-${type} position-fixed top-0 end-0 m-3 favorite-notification`;
+    notification.style.zIndex = '9999';
+    notification.style.minWidth = '250px';
+    notification.textContent = message;
+    
+    document.body.appendChild(notification);
+    
+    // Remove after 3 seconds
+    setTimeout(() => {
+        notification.remove();
+    }, 3000);
+}
+
+// Initialize on page load
 document.addEventListener('DOMContentLoaded', function () {
-    updateFavoritesCount();
-    updateButtons();
-    loadFavoritesPage();
+    console.log('Favorites script loaded!');
+
+    // Add click event to all favorite buttons
+    document.querySelectorAll('.add-to-favorites').forEach(btn => {
+        btn.addEventListener('click', function() {
+            toggleFavorite(this);
+        });
+    });
+    
+    // Initialize button states for authenticated users
+    initializeFavoriteButtons();
 });
+
+// Initialize favorite buttons state
+function initializeFavoriteButtons() {
+    // This function can be used to set initial states if needed
+    // For now, the server-side template handles the initial state
+}

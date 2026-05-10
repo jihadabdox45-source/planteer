@@ -1,8 +1,5 @@
 {% extends 'core/base.html' %}
 {% load static %}
-{% block extra_css %}
-<link rel="stylesheet" href="{% static 'css/stayle.css' %}">
-{% endblock %}
 
 {% block title %}All Plants - Planteer{% endblock %}
 
@@ -10,7 +7,8 @@
 <!-- Page Header -->
 <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-4">
     <div>
-        <h1 class="mb-2" style="font-size: 3rem; font-weight: 900; color: var(--gray-900);">
+        <h1 class="mb-2" style="font-size: 2.5rem; font-weight: 900; color: var(--gray-900);">
+            <i class="bi bi-grid-3x3-gap-fill me-2" style="color: var(--primary);"></i>
             Plant Collection
         </h1>
         <p class="text-muted mb-0" style="font-size: 1.1rem;">
@@ -18,7 +16,7 @@
         </p>
     </div>
     <a href="{% url 'plants:add_plant' %}" class="btn btn-main btn-lg">
-        <span style="font-size: 1.3rem;">+</span> Add New Plant
+        <i class="bi bi-plus-circle-fill me-2"></i> Add New Plant
     </a>
 </div>
 
@@ -26,12 +24,14 @@
 <form method="GET" class="filter-box mb-5">
     <div class="row g-4">
         <div class="col-12">
-            <h5 class="fw-bold mb-3" style="color: var(--gray-800);">Search & Filter</h5>
+            <h5 class="fw-bold mb-3" style="color: var(--gray-800);">
+                <i class="bi bi-funnel-fill me-2"></i> Search & Filter
+            </h5>
         </div>
         
-        <div class="col-md-4">
+        <div class="col-md-3">
             <label class="form-label">
-                <span style="font-size: 1.1rem;"></span> Search Plants
+                <i class="bi bi-search me-1"></i> Search Plants
             </label>
             <input 
                 type="text" 
@@ -42,23 +42,37 @@
             >
         </div>
 
-        <div class="col-md-3">
+        <div class="col-md-2">
             <label class="form-label">
-                <span style="font-size: 1.1rem;"></span> Category
+                <i class="bi bi-tag-fill me-1"></i> Category
             </label>
             <select name="category" class="form-select">
                 <option value="">All Categories</option>
-                {% for value, label in categories %}
-                <option value="{{ value }}" {% if selected_category == value %}selected{% endif %}>
-                    {{ label }}
+                {% for category in categories %}
+                <option value="{{ category.id }}" {% if selected_category == category.id|stringformat:"s" %}selected{% endif %}>
+                    {{ category.name }}
                 </option>
                 {% endfor %}
             </select>
         </div>
 
-        <div class="col-md-3">
+        <div class="col-md-2">
             <label class="form-label">
-                 Edibility
+                <i class="bi bi-globe me-1"></i> Country
+            </label>
+            <select name="country" class="form-select">
+                <option value="">All Countries</option>
+                {% for country in countries %}
+                <option value="{{ country.id }}" {% if selected_country == country.id|stringformat:"s" %}selected{% endif %}>
+                    {{ country.name }}
+                </option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="col-md-2">
+            <label class="form-label">
+                <i class="bi bi-check-circle-fill me-1"></i> Edibility
             </label>
             <select name="is_edible" class="form-select">
                 <option value="">All Plants</option>
@@ -71,14 +85,14 @@
             </select>
         </div>
 
-        <div class="col-md-2">
+        <div class="col-md-3">
             <label class="form-label d-none d-md-block">&nbsp;</label>
             <div class="d-grid gap-2">
                 <button class="btn btn-main" type="submit">
-                    Apply Filters
+                    <i class="bi bi-check2 me-1"></i> Apply
                 </button>
                 <a href="{% url 'plants:all_plants' %}" class="btn btn-outline-secondary">
-                    Clear All
+                    <i class="bi bi-x-circle me-1"></i> Clear
                 </a>
             </div>
         </div>
@@ -88,6 +102,7 @@
 <!-- Results Count -->
 <div class="d-flex justify-content-between align-items-center mb-4 p-3 rounded-3" style="background: rgba(16, 185, 129, 0.05);">
     <div class="d-flex align-items-center gap-2">
+        <i class="bi bi-info-circle-fill" style="color: var(--primary); font-size: 1.2rem;"></i>
         <span class="fw-semibold" style="color: var(--gray-700);">
             Found <span class="fw-bold" style="color: var(--primary); font-size: 1.2rem;">{{ plants_count }}</span> 
             plant{{ plants_count|pluralize }}
@@ -98,89 +113,22 @@
 <!-- Plants Grid -->
 <div class="row g-4">
     {% for plant in plants %}
-    <div class="col-sm-6 col-lg-4 col-xl-3">
-        <div class="plant-card">
-            <div style="overflow: hidden; position: relative;">
-                <img src="{{ plant.image_url }}" class="card-img-top" alt="{{ plant.name }}">
-                <div class="position-absolute top-0 end-0 m-3">
-                    <button class="btn btn-sm add-to-favorites" 
-                            data-plant-id="{{ plant.id }}"
-                            `onclick="toggleFavorite({{ plant.id }}`, {
-                                `id: {{ plant.id }}`,
-                                `name: '{{ plant.name|escapejs }}',
-                                'scientific_name: '{{ plant.scientific_name|escapejs }}',
-                                'description: '{{ plant.description|escapejs }}',
-                                'image_url: '{{ plant.image_url|escapejs }}',
-                                'category_display: '{{ plant.get_category_display|escapejs }}',
-                                'is_edible: {{ plant.is_edible|yesno:'true,false' }},
-                                'average_rating: {{ plant.average_rating }},
-                                'comments_count: {{ plant.comments.count }}'
-                            })"
-                            style="border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;"
-                            title="Add to favorites">
-                        
-                    </button>
-                </div>
-                <div class="position-absolute bottom-0 end-0 m-3">
-                    {% if plant.is_edible %}
-                    <span class="badge text-bg-success">Edible</span>
-                    {% else %}
-                    <span class="badge text-bg-secondary">Not Edible</span>
-                    {% endif %}
-                </div>
-            </div>
-            
-            <div class="card-body">
-                <div class="mb-3">
-                    <span class="category-badge">{{ plant.get_category_display }}</span>
-                </div>
-                
-                <h5 class="card-title">{{ plant.name }}</h5>
-                <p class="text-muted small mb-2" style="font-style: italic;">
-                    {{ plant.scientific_name }}
-                </p>
-                <p class="small text-muted mb-3" style="line-height: 1.6;">
-                    {{ plant.description|truncatewords:12 }}
-                </p>
-                
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                    <div class="card-rating">
-                        <div class="rating-stars">
-                            {% for i in "12345" %}
-                                {% if forloop.counter <= plant.average_rating %}
-                                    <span class="star">★</span>
-                                {% else %}
-                                    <span class="star empty">★</span>
-                                {% endif %}
-                            {% endfor %}
-                        </div>
-                        <span class="rating-number">{{ plant.average_rating }}</span>
-                    </div>
-                    <small class="text-muted">
-                        {{ plant.comments.count }} comment{{ plant.comments.count|pluralize }}
-                    </small>
-                </div>
-                
-                <a href="{% url 'plants:detail' plant.id %}" class="btn btn-outline-main w-100">
-                    View Details →
-                </a>
-            </div>
-        </div>
-    </div>
+        <!-- Pass the current 'plant' variable to the included template -->
+        {% include "plants/partials/_plant_card.html" with plant=plant %}
     {% empty %}
     <div class="col-12">
         <div class="text-center p-5 rounded-4" style="background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(236, 253, 245, 0.9)); border: 2px dashed var(--primary);">
-            <div style="font-size: 5rem; margin-bottom: 1.5rem;"></div>
-            <h3 class="fw-bold mb-3" style="color: var(--gray-800);">No Plants Found</h3>
+            <i class="bi bi-inbox" style="font-size: 5rem; color: var(--primary); opacity: 0.3;"></i>
+            <h3 class="fw-bold mb-3 mt-3" style="color: var(--gray-800);">No Plants Found</h3>
             <p class="text-muted mb-4" style="font-size: 1.1rem;">
                 We couldn't find any plants matching your criteria. Try adjusting your filters.
             </p>
             <div class="d-flex gap-3 justify-content-center flex-wrap">
                 <a href="{% url 'plants:all_plants' %}" class="btn btn-main">
-                    Clear Filters
+                    <i class="bi bi-arrow-clockwise me-2"></i> Clear Filters
                 </a>
                 <a href="{% url 'plants:add_plant' %}" class="btn btn-outline-main">
-                    Add New Plant
+                    <i class="bi bi-plus-circle-fill me-2"></i> Add New Plant
                 </a>
             </div>
         </div>
@@ -188,7 +136,4 @@
     {% endfor %}
 </div>
 
-{% block extra_js %}
-<script src="{% static 'js/script.js' %}"></script>
-{% endblock %}
 {% endblock %}
